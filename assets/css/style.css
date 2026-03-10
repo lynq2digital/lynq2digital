@@ -162,7 +162,7 @@ body {
 }
 
 :root.light-theme .barra {
-    background: rgba(252, 251, 251, 0.8);
+    background: rgb(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -223,6 +223,12 @@ body {
 
 }
 
+.logo-icon img {
+    width: 80px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 
 :root.light-theme .logo-icon {
@@ -1027,7 +1033,7 @@ body {
 /* ================================================== */
 .portfolio-section {
     position: relative;
-    padding: 100px 0 200px;
+    padding: 100px 0 0;
     background-image: url("../images/about.jpg");
     background-size: cover;
     background-position: top;
@@ -1059,6 +1065,8 @@ body {
 
 .portfolio-grid {
     display: block;
+    padding-bottom: 40px;
+    /* Extra scroll-track space specifically designed for the last card */
 }
 
 .portfolio-item {
@@ -1093,8 +1101,12 @@ body {
 }
 
 .portfolio-item:nth-child(5) {
-    top: 208px;
+    top: 130px;
     z-index: 5;
+}
+
+.portfolio-item:last-child {
+    margin-bottom: 120px;
 }
 
 .portfolio-image {
@@ -1248,6 +1260,7 @@ body {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 32px;
+        padding-bottom: 0;
     }
 
     .portfolio-item {

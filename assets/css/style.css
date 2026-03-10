@@ -833,7 +833,7 @@ body {
 /* Disabled state — Swiper adds this class automatically at boundaries */
 .services-btn-prev.swiper-button-disabled,
 .services-btn-next.swiper-button-disabled {
-    opacity: 0.3;
+    opacity: 0.1;
     cursor: not-allowed;
     pointer-events: none;
 }

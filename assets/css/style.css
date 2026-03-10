@@ -1083,7 +1083,7 @@ body {
     overflow: hidden;
     height: 420px;
     cursor: none;
-    margin-bottom: 140px;
+    margin-bottom: 80px;
     /* Space to allow the user to read the card before the next slides up */
     border: 1px solid var(--border-color);
 }
@@ -1099,22 +1099,14 @@ body {
 }
 
 .portfolio-item:nth-child(3) {
-    top: 144px;
+    top: 104px;
     z-index: 3;
 }
 
-.portfolio-item:nth-child(4) {
-    top: 176px;
-    z-index: 4;
-}
 
-.portfolio-item:nth-child(5) {
-    top: 130px;
-    z-index: 5;
-}
 
 .portfolio-item:last-child {
-    margin-bottom: 120px;
+    margin-bottom: 64px;
 }
 
 .portfolio-image {

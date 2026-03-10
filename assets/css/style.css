@@ -830,6 +830,14 @@ body {
     stroke: #000;
 }
 
+/* Disabled state — Swiper adds this class automatically at boundaries */
+.services-btn-prev.swiper-button-disabled,
+.services-btn-next.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
 :root.light-theme .services-btn-prev,
 :root.light-theme .services-btn-next {
     border: 1px solid #ccc;
@@ -1625,10 +1633,10 @@ body {
 /* Mobile First — botões colados no canto */
 .scroll-to-top {
     position: fixed;
-    bottom: 90px;
+    bottom: 96px;
     right: 12px;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     color: var(--accent-green);
     background: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(16px);
@@ -1666,8 +1674,8 @@ body {
     position: fixed;
     bottom: 30px;
     right: 12px;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     background: #25D366;
     color: #fff;
     border-radius: 50%;

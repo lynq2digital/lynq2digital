@@ -1622,12 +1622,13 @@ body {
     display: block;
 }
 
+/* Mobile First — botões colados no canto */
 .scroll-to-top {
     position: fixed;
-    bottom: 110px;
-    right: 30px;
-    width: 56px;
-    height: 56px;
+    bottom: 90px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
     color: var(--accent-green);
     background: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(16px);
@@ -1663,10 +1664,10 @@ body {
 /* WhatsApp Button */
 .whatsapp-button {
     position: fixed;
-    bottom: 40px;
-    right: 30px;
-    width: 56px;
-    height: 56px;
+    bottom: 30px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
     background: #25D366;
     color: #fff;
     border-radius: 50%;
@@ -1690,6 +1691,23 @@ body {
 .whatsapp-button.visible:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Tablet e acima — tamanho e posição originais */
+@media (min-width: 768px) {
+    .scroll-to-top {
+        bottom: 110px;
+        right: 30px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .whatsapp-button {
+        bottom: 40px;
+        right: 30px;
+        width: 56px;
+        height: 56px;
+    }
 }
 
 /* ==================================================== */

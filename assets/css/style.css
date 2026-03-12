@@ -194,18 +194,9 @@ body {
 
 
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 20px;
-    font-weight: 600;
-    flex-shrink: 0;
-}
 
-.logo-text {
-    display: none;
-}
+
+
 
 .logo-icon {
 
@@ -226,7 +217,7 @@ body {
 .logo-icon img {
     width: 80px;
 
-    border-radius: 50%;
+
     object-fit: cover;
 }
 
@@ -1010,6 +1001,7 @@ body {
     font-size: 36px;
     font-weight: 700;
     color: var(--accent-green);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -1450,12 +1442,17 @@ body {
 .contact-icon {
     width: 48px;
     height: 48px;
-    background: rgba(145, 148, 144, 0.1);
+    background: var(--bg-secondary);
     color: var(--accent-green);
     border-radius: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+:root.light-theme .contact-icon {
+    background: var(--accent-green);
+    color: var(--text-secondary)
 }
 
 .contact-description {

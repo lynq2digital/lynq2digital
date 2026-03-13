@@ -218,7 +218,7 @@ body {
 
 .barra {
 
-    background: rgba(17, 17, 17, 0.8);
+    background: rgba(19, 19, 19, 0.7);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     color: var(--text-primary);
@@ -235,7 +235,7 @@ body {
 }
 
 :root.light-theme .barra {
-    background: rgb(255, 255, 255, 0.8);
+    background: rgba(244, 244, 244, 0.5);
 
 }
 

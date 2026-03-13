@@ -42,18 +42,19 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
 }
 
 .services-btn-prev:hover,
 .services-btn-next:hover {
     background: var(--accent-green);
     border-color: var(--accent-green);
-    color: #000;
+    color: #050505;
 }
 
 .services-btn-prev:hover svg,
 .services-btn-next:hover svg {
-    stroke: #000;
+    stroke: #050505;
 }
 
 /* Disabled state — Swiper adds this class automatically at boundaries */
@@ -64,19 +65,6 @@
     pointer-events: none;
 }
 
-:root.light-theme .services-btn-prev,
-:root.light-theme .services-btn-next {
-    border: 1px solid #ccc;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-
-:root.light-theme .services-btn-prev:hover,
-:root.light-theme .services-btn-next:hover {
-    background: var(--accent-green);
-    border-color: var(--accent-green);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
 
 .service-card {
     background: var(--bg-secondary);
@@ -90,6 +78,7 @@
     gap: 16px;
     position: relative;
     height: 100%;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .service-card::before {
@@ -127,7 +116,7 @@
 
 .service-card:hover .service-icon {
     background: var(--accent-green);
-    color: #000000;
+    color: #050505;
     /* Preto text on green is fine in both themes */
     border-color: var(--accent-green);
 }

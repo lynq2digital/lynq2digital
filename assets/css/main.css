@@ -11,7 +11,7 @@
 :root {
     --bg-primary: #050505;
     --bg-secondary: #131313;
-    --bg-card: #191919;
+
     --text-primary: #ffffff;
     --text-secondary: #999999;
     --accent-green: #aeff2b;
@@ -21,10 +21,10 @@
 
 /* ===== Light Theme ===== */
 :root.light-theme {
-    --bg-primary: #EAEAEA;
+    --bg-primary: #ececec;
 
-    --bg-secondary: #f3f3f3;
-    --bg-card: #fdfdfd;
+    --bg-secondary: #f4f4f4;
+
     --text-primary: #444444;
     --text-secondary: #555555;
     --border-color: #d9d9d9;

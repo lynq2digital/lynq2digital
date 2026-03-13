@@ -292,6 +292,26 @@ class WebsiteController {
                 },
             });
         }
+
+        // Reviews Swiper
+        if (document.querySelector('.reviews-swiper')) {
+            new Swiper('.reviews-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.reviews-btn-next',
+                    prevEl: '.reviews-btn-prev',
+                },
+                breakpoints: {
+                    640: { slidesPerView: 1, spaceBetween: 24 },
+                    900: { slidesPerView: 1, spaceBetween: 28 },
+                    1024: { slidesPerView: 1, spaceBetween: 28 },
+                    1200: { slidesPerView: 1, spaceBetween: 32 },
+                    1400: { slidesPerView: 1, spaceBetween: 32 },
+                },
+            });
+        }
     }
 
     // ========== FAQ Accordion ==========

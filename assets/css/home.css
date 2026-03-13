@@ -281,16 +281,12 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: rgba(0, 0, 0, 0.90);
+    background: var(--bg-primary);
     /* filtro escuro forte default */
     transition: background 0.3s ease;
 }
 
-/* tema light */
-:root.light-theme .portfolio-section::before {
-    background: rgba(255, 255, 255, 0.75);
-    /* filtro claro forte */
-}
+
 
 /* garante que o conteúdo fique acima do filtro */
 .portfolio-section>* {
@@ -618,7 +614,7 @@
 /* ================================================== */
 .cta-section {
     padding: 100px 0;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
 }
 
 .cta-wrapper {

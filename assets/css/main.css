@@ -21,7 +21,7 @@
 
 /* ===== Light Theme ===== */
 :root.light-theme {
-    --bg-primary: #e7e7e7;
+    --bg-primary: #EAEAEA;
 
     --bg-secondary: #f3f3f3;
     --bg-card: #fdfdfd;

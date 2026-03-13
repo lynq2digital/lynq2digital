@@ -264,6 +264,10 @@ class WebsiteController {
                     640: { slidesPerView: 1.4, spaceBetween: 24, centeredSlides: false },
                     900: { slidesPerView: 2.3, spaceBetween: 28, centeredSlides: false },
                     1200: { slidesPerView: 3.2, spaceBetween: 32, centeredSlides: false },
+                    1600: { slidesPerView: 3.5, spaceBetween: 40, centeredSlides: false },
+                    2000: { slidesPerView: 3.8, spaceBetween: 48, centeredSlides: false },
+                    2560: { slidesPerView: 4.2, spaceBetween: 56, centeredSlides: false },
+                    3840: { slidesPerView: 4.5, spaceBetween: 64, centeredSlides: false },
                 },
             });
         }

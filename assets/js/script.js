@@ -10,7 +10,10 @@ class WebsiteController {
         this.ultimoScroll = 0;
         this.scrollDirection = 'up';
 
-        this.showAfterPx = 600;
+        // Use the hero section's real height so the header hides
+        // right after the hero ends (works for short inner-page heroes too)
+        const heroEl = document.getElementById('hero');
+        this.showAfterPx = heroEl ? heroEl.offsetHeight : 600;
         this.barraTopVisible = '8px';
         this.barraTopHidden = '-120px';
 

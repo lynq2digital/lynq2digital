@@ -1,0 +1,1061 @@
+/* ==================================================== */
+/* ==================== Reset e Base ================== */
+/* ==================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Dark Theme (default) ===== */
+:root {
+    --bg-primary: #050505;
+    --bg-secondary: #121212;
+    --bg-card: #191919;
+    --text-primary: #ffffff;
+    --text-secondary: #999999;
+    --accent-green: #aeff2b;
+
+    --border-color: #222222;
+}
+
+/* ===== Light Theme ===== */
+:root.light-theme {
+    --bg-primary: #f3f3f3;
+
+    --bg-secondary: #e7e7e7;
+    --bg-card: #fdfdfd;
+    --text-primary: #444444;
+    --text-secondary: #555555;
+    --border-color: #dbdbdb;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p,
+span {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+a,
+p,
+li,
+span,
+button,
+label,
+input,
+textarea {
+    font-family: "Inter", sans-serif;
+    color: var(--text-primary);
+}
+
+/*==========================  */
+/* ====== SCROLL BAR ======== */
+/*==========================  */
+
+/* Barra de rolagem - largura */
+::-webkit-scrollbar {
+    width: 10px;
+    z-index: 3;
+}
+
+/* Fundo da barra (trilho) */
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+/* Parte que se move (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-green);
+    border-radius: 8px;
+    /* Cor laranja */
+
+    border: 1px solid var(--background);
+    /* Borda entre thumb e track */
+}
+
+/* ==== Body ==== */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@media (min-width: 900px) {
+    .container {
+        padding: 0 28px;
+    }
+}
+
+.btn-primary {
+    background: var(--accent-green);
+    color: #000000;
+    padding: 6px 5px 6px 24px;
+    border-radius: 100px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    justify-content: flex-end;
+    /* Keeps arrow to the right if span doesn't fill it */
+    align-items: center;
+    gap: 16px;
+    height: auto;
+}
+
+.btn-primary span {
+    margin: 0;
+    color: #000;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.arrow {
+    background-color: #000;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow svg {
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+
+
+.btn-primary:hover .arrow svg {
+    transform: rotate(0deg);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0 32px;
+    /* Remove vertical padding, rely on height/flex for centering */
+    border-radius: 100px;
+    height: 48px;
+    /* Fixed height to match the primary button if needed */
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    /* Fixed typo from align-itens */
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .btn-secondary {
+        /* Reset if necessary on desktop, but let's keep it consistent */
+        height: 52px;
+    }
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+/* ================================================== */
+/* ==================== HEADER ======================== */
+/* ================================================== */
+
+.header {
+    position: fixed;
+    top: 8px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    pointer-events: none;
+    transition: top 0.4s ease;
+}
+
+.header .container {
+    pointer-events: auto;
+}
+
+.barra {
+
+    background: rgba(17, 17, 17, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 70px;
+    border-radius: 40px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
+    margin: 0 auto;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    will-change: width, height;
+}
+
+:root.light-theme .barra {
+    background: rgb(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+.barra.compacta {
+    width: 80%;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
+}
+
+
+
+.barra.expansivel {
+    height: 480px;
+    width: 100%;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
+}
+
+.barra-topo {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    height: 70px;
+    flex-shrink: 0;
+    gap: 16px;
+}
+
+
+
+
+
+
+
+.logo-icon {
+
+    border-radius: 100px;
+    padding: 12px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-green);
+    font-weight: 700;
+    font-size: 20px;
+
+
+}
+
+.logo-icon img {
+    width: 80px;
+
+
+    object-fit: cover;
+}
+
+
+:root.light-theme .logo-icon {
+    color: var(--text-primary);
+}
+
+.logo-code {
+    background: var(--accent-green);
+    color: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 400;
+}
+
+@media (min-width: 1081px) {
+    .barra-topo {
+        gap: 32px;
+    }
+
+    .logo {
+        flex-shrink: 1;
+    }
+
+    .logo-text {
+        display: block;
+    }
+}
+
+.nav-desktop {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-desktop ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-desktop ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-desktop ul li a:hover {
+    color: var(--accent-green);
+}
+
+.nav-item-flex {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-badge {
+    background-color: var(--accent-green);
+    color: #000;
+    font-size: 10px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    line-height: 1;
+    position: relative;
+    top: -8px;
+}
+
+.nav-mobile-list .nav-badge {
+    top: -14px;
+}
+
+@media (min-width: 1080px) {
+    .nav-desktop {
+        display: flex;
+    }
+}
+
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.header-actions .btn-primary {
+    display: none;
+}
+
+@media (min-width: 1081px) {
+    .header-actions {
+        margin-left: 0;
+        gap: 16px;
+    }
+
+    .header-actions .btn-primary {
+        display: inline-flex;
+    }
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 8px;
+
+}
+
+.menu-btn span {
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.menu-btn.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@media (min-width: 1081px) {
+    .menu-btn {
+        display: none;
+    }
+}
+
+/* Nav Mobile */
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    padding: 16px 28px 28px;
+    gap: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    flex-grow: 1;
+    /* allow taking remaining height to push items to the bottom */
+}
+
+.barra.expansivel .nav-mobile {
+    display: flex;
+    opacity: 1;
+}
+
+/* Nav Mobile Items Animation */
+.nav-mobile-list li,
+.nav-mobile-btn {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.barra.expansivel .nav-mobile-list li {
+    animation: fadeSlideRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.barra.expansivel .nav-mobile-btn {
+    animation: fadeSlideRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Staggered delays for a cascade effect */
+.barra.expansivel .nav-mobile-list li:nth-child(1) {
+    animation-delay: 0.10s;
+}
+
+.barra.expansivel .nav-mobile-list li:nth-child(2) {
+    animation-delay: 0.18s;
+}
+
+.barra.expansivel .nav-mobile-list li:nth-child(3) {
+    animation-delay: 0.26s;
+}
+
+.barra.expansivel .nav-mobile-list li:nth-child(4) {
+    animation-delay: 0.34s;
+}
+
+.barra.expansivel .nav-mobile-list li:nth-child(5) {
+    animation-delay: 0.42s;
+}
+
+.barra.expansivel .nav-mobile-btn {
+    animation-delay: 0.50s;
+}
+
+@keyframes fadeSlideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nav-mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+.nav-mobile-list li a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.nav-mobile-list li a:hover {
+    background: rgba(57, 255, 20, 0.1);
+    color: var(--accent-green);
+}
+
+.nav-mobile-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 15px;
+}
+
+@media (min-width: 1080px) {
+    .nav-mobile {
+        display: none;
+    }
+}
+
+
+/* Theme Toggle & Scroll Top */
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 8px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.theme-toggle:hover {
+    color: var(--accent-green);
+}
+
+/* Dark mode (default): show sun, hide moon */
+.sun-icon {
+    display: block;
+}
+
+.moon-icon {
+    display: none;
+}
+
+/* Light mode: show moon, hide sun */
+.light-theme .sun-icon {
+    display: none;
+}
+
+.light-theme .moon-icon {
+    display: block;
+}
+
+/* Mobile First — botões colados no canto */
+.scroll-to-top {
+    position: fixed;
+    bottom: 96px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: translateX(100px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 990;
+}
+
+:root.light-theme .scroll-to-top {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-to-top.visible {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-to-top.visible:hover {
+    background: var(--accent-green);
+    border-color: var(--accent-green);
+    color: #000;
+}
+
+.scroll-to-top.visible:hover svg {
+    stroke: #000;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 32px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+    z-index: 990;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100px);
+}
+
+.whatsapp-button.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.whatsapp-button.visible:hover {
+
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
+}
+
+/* Tablet e acima — tamanho e posição originais */
+@media (min-width: 768px) {
+    .scroll-to-top {
+        bottom: 110px;
+        right: 30px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .whatsapp-button {
+        bottom: 40px;
+        right: 30px;
+        width: 56px;
+        height: 56px;
+    }
+}
+
+/* ==================================================== */
+/* ============= SECTION HEADER (shared) ============= */
+/* ==================================================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--accent-green);
+    border-radius: 100px;
+    color: #232323;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.section-title .highlight {
+    color: var(--accent-green);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.section-description {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ================================================== */
+/* ==================== HERO ========================= */
+/* ================================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#canvas1 {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--accent-green);
+    border-radius: 100px;
+    color: #232323;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.hero-title .highlight {
+    color: var(--accent-green);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 32px auto;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+    width: 80%;
+    text-align: center;
+}
+
+.hero-buttons .btn-primary {
+    justify-content: space-between;
+}
+
+.hero-buttons .btn-secondary {
+    justify-content: center;
+}
+
+.btn-primary {
+    background: var(--accent-green);
+    color: #000000;
+    padding: 6px 5px 6px 24px;
+    border-radius: 100px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    justify-content: flex-end;
+    /* Keeps arrow to the right if span doesn't fill it */
+    align-items: center;
+    gap: 16px;
+    height: auto;
+}
+
+.btn-primary span {
+    margin: 0;
+    color: #000;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.arrow {
+    background-color: #000;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow svg {
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+
+
+.btn-primary:hover .arrow svg {
+    transform: rotate(0deg);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0 32px;
+    /* Remove vertical padding, rely on height/flex for centering */
+    border-radius: 100px;
+    height: 48px;
+    /* Fixed height to match the primary button if needed */
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    /* Fixed typo from align-itens */
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .btn-secondary {
+        /* Reset if necessary on desktop, but let's keep it consistent */
+        height: 52px;
+    }
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+@media (min-width: 481px) {
+    .hero {
+        padding-top: 160px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero {
+        justify-content: flex-start;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero-description {
+        margin: 32px 0;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+        width: auto;
+    }
+}
+
+/* ================================================== */
+/* ==================== HERO BREADCRUMB ============= */
+/* ================================================== */
+.hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+@media (min-width: 769px) {
+    .hero-breadcrumb {
+        justify-content: flex-start;
+    }
+}
+
+.hero-breadcrumb a {
+    color: var(--text-secondary);
+    transition: color 0.3s;
+}
+
+.hero-breadcrumb a:hover {
+    color: var(--accent-green);
+}
+
+.hero-breadcrumb .separator {
+    opacity: 0.4;
+}
+
+.hero-breadcrumb .current {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ================================================== */
+/* ==================== CATEGORY STRIP ============= */
+/* ================================================== */
+.category-strip {
+    background: var(--accent-green);
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    line-height: 1;
+    display: flex;
+}
+
+.category-strip-content {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    animation: scroll 120s linear infinite;
+    animation-play-state: running;
+}
+
+.category-strip:hover .category-strip-content {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.category-strip-content span {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    display: inline;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.category-strip-content .separator {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1;
+    display: inline;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) {
+    .category-strip-content span {
+        font-size: 20px;
+    }
+
+    .category-strip-content .separator {
+        font-size: 26px;
+        margin: 0 15px;
+    }
+}
+
+/* ==================================================== */
+/* ============= CUSTOM CURSOR (shared) ============== */
+/* ==================================================== */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    mix-blend-mode: normal;
+}
+
+.custom-cursor.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+/* ==================================================== */
+/* ==================== Light Theme ================== */
+/* ==================================================== */
+
+/* Adjust specific elements for light theme */
+.light-theme .barra {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .service-card,
+.light-theme .faq-item,
+.light-theme .blog-card,
+.light-theme .contact-form {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .btn-secondary {
+    border-color: var(--border-color);
+}

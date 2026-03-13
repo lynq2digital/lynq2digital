@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="JG DEV - Desenvolvimento web profissional. Criamos websites modernos, rápidos e otimizados para converter visitantes em clientes. Especialistas em UI/UX e full-stack." />
+    <title>Lynq2 Digital</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/hero-pages.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+    </div>
+    <!-- ======================================================= -->
+    <!-- ================== HEADER SECTION ===================== -->
+    <!-- ======================================================= -->
+    <header class="header">
+        <div class="container">
+            <div class="barra" id="barra">
+
+                <div class="barra-topo">
+
+
+                    <div class="logo-icon">
+                        <img src="../assets/images/logo.png">
+                    </div>
+
+
+                    <nav class="nav-desktop">
+                        <ul>
+                            <li><a href="../index.html">Início</a></li>
+                            <li><a href="#services" class="nav-item-flex">Serviços <span class="nav-badge">5</span></a>
+                            </li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#portfolio">Portfólio</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-actions">
+
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
+
+                            <!-- Sun Icon -->
+                            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+
+                            <!-- Moon Icon -->
+                            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+
+                        </button>
+
+                        <a href="#contato" class="btn-primary">
+                            <span>Fale Conosco</span>
+                            <div class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                    <path fill="#ffffff"
+                                        d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="menu-btn" id="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <nav class="nav-mobile">
+                    <ul class="nav-mobile-list">
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#services" class="nav-item-flex">Serviços <span class="nav-badge">5</span></a>
+                        </li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                    <a href="#contato" class="btn-primary nav-mobile-btn">
+                        <span>Fale Conosco</span>
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="#ffffff"
+                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
+                                </path>
+                            </svg>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================================================= -->
+        <!-- ================== HERO SECTION ======================= -->
+        <!-- ======================================================= -->
+        <section class="hero" id="hero">
+            <canvas id="canvas1"></canvas>
+            <div class="container">
+                <div class="hero-content">
+                    <nav class="hero-breadcrumb">
+                        <span class="breadcrumb-link"><a href="../index.html">Início</a></span>
+                        <span class="separator">/</span>
+                        <span class="current">Contato</span>
+                    </nav>
+                    <h1 class="hero-title">
+                        Fale
+                        <span class="highlight">Conosco</span>
+                    </h1>
+                    <p class="hero-description">
+                        Estamos prontos para ouvir suas ideias e transformá-las em soluções digitais de alto impacto.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- ======================================================= -->
+        <!-- ================== CATEGORY STRIP ===================== -->
+        <!-- ======================================================= -->
+        <section class="category-strip">
+            <div class="category-strip-content">
+                <span>Web Design</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+
+                <span>Sistemas Web</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+                <span>E-commerce</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+                <span>SEO</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+
+                <span>Desenvolvimento Web</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="32" height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+
+                <span>E-commerce</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+                <span>SEO</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+                <span>Mais Vendas</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+                <span>Mais Clientes</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+
+                <span>E-commerce</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+
+                <span>Web Design</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+
+
+                <span>ADS</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                            clip-rule="evenodd" />
+                    </svg></span>
+
+            </div>
+
+        </section>
+        <!-- ======================================================= -->
+        <!-- ================== CONTACT SECTION ==================== -->
+        <!-- ======================================================= -->
+        <section class="contact-section" id="contato">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-left">
+                        <div class="section-badge">Entre em Contato</div>
+                        <h2 class="section-title">Vamos Conversar Sobre Seu <span class="highlight">Próximo
+                                Projeto</span></h2>
+                        <p class="contact-description">
+                            Estamos prontos para transformar suas ideias em realidade. Entre em contato e vamos
+                            discutir como podemos ajudar seu negócio a crescer online.
+                        </p>
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Endereço</h4>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Telefone</h4>
+                                    <p>+55 (99) 99999-9999</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>contato@com.br</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form class="contact-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="name">Seu Nome *</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefone</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Assunto</label>
+                                    <input type="text" id="subject" name="subject">
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="message">Mensagem *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ======================================================= -->
+    <!-- ================== FOOTER ============================ -->
+    <!-- ======================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="../assets/images/logo.png">
+                        </div>
+
+                    </div>
+                    <p class="footer-description">
+                        Transformando ideias em experiências digitais excepcionais.
+                        Criamos websites que fazem a diferença.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Websites</a></li>
+                        <li><a href="#services">E-commerce</a></li>
+                        <li><a href="#services">Landing Pages</a></li>
+                        <li><a href="#services">Aplicações Web</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>contato@o.com.br</li>
+                        <li>+55 (41) 99999-9999</li>
+                        <li>Curitiba, PR</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/particles.js"></script>
+</body>
+
+</html>

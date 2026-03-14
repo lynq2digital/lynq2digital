@@ -125,6 +125,7 @@
 
 .service-card .btn-primary {
     margin-top: auto;
+    max-width: 240px;
 }
 
 /* ================================================== */
@@ -276,71 +277,88 @@
 /* ================================================== */
 /* ==================== PORTFOLIO =================== */
 /* ================================================== */
+
+:root {
+    --cards: 3;
+    --cardHeight: 420px;
+    --cardTopPadding: 20px;
+    --cardMargin: 4vw;
+    --accent-green: #aeff2b;
+    --border-color: rgba(255, 255, 255, 0.12);
+}
+
 .portfolio-section {
     position: relative;
-    padding: 100px 0 0;
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    padding: 80px 0;
+    /* SEM overflow: hidden — mata o sticky! */
 }
 
-/* overlay base */
-.portfolio-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background: var(--bg-primary);
-    /* filtro escuro forte default */
-    transition: background 0.3s ease;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 
 
-/* garante que o conteúdo fique acima do filtro */
-.portfolio-section>* {
-    position: relative;
-    z-index: 1;
+.section-title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
+.section-description {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+}
+
+/* --- GRID MOBILE: stacking --- */
 .portfolio-grid {
-    display: block;
-    padding-bottom: 40px;
-    /* Extra scroll-track space specifically designed for the last card */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--cards), var(--cardHeight));
+    gap: 2;
+    padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+    margin-bottom: var(--cardMargin);
 }
 
-.portfolio-item {
+/* índice de cada card */
+#card1 {
+    --index: 1;
+}
+
+#card2 {
+    --index: 2;
+}
+
+#card3 {
+    --index: 3;
+}
+
+/* Wrapper transparente — o sticky é AQUI */
+.portfolio-card-wrapper {
     position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+/* Card visível — não é sticky, só tem a altura */
+.portfolio-item {
+    position: relative;
+    height: var(--cardHeight);
     border-radius: 28px;
     overflow: hidden;
-    height: 420px;
-    cursor: none;
-    margin-bottom: 80px;
-    /* Space to allow the user to read the card before the next slides up */
+    cursor: pointer;
     border: 1px solid var(--border-color);
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-.portfolio-item:nth-child(1) {
-    top: 80px;
-    z-index: 1;
-}
-
-.portfolio-item:nth-child(2) {
-    top: 112px;
-    z-index: 2;
-}
-
-.portfolio-item:nth-child(3) {
-    top: 104px;
-    z-index: 3;
-}
-
-
-
-.portfolio-item:last-child {
-    margin-bottom: 64px;
+    background-color: rgba(199, 199, 199, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /* Cinza quase transparente */
 }
 
 .portfolio-image {
@@ -356,31 +374,29 @@
     transform: scale(1.08);
 }
 
-/* Dark overlay on the image */
+/* Overlay escuro */
 .portfolio-item::after {
     content: "";
     position: absolute;
     inset: 0;
-    /* Dark gradient over the image */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 100%);
     z-index: 2;
-    /* Put it above the image but below the wrapper */
     transition: background 0.4s ease;
     pointer-events: none;
 }
 
 .portfolio-item:hover::after {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.65) 100%);
 }
 
-/* Overlay info box - slides up on hover */
 .portfolio-link-wrapper {
     display: block;
     width: 100%;
     height: 100%;
     position: relative;
     z-index: 3;
-    cursor: none;
+    text-decoration: none;
+    color: inherit;
 }
 
 .portfolio-overlay {
@@ -389,67 +405,60 @@
     left: 16px;
     right: 16px;
     z-index: 4;
-    /* Inside wrapper, highest layer */
-    /* Dark semi-transparent background for text readability */
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 28px;
-    padding: 28px 24px;
+    border-radius: 20px;
+    padding: 24px 20px;
     transform: translateY(-16px);
     opacity: 1;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 0.35s ease;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-    transform: translateY(-16px);
-    opacity: 1;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
 }
 
 .portfolio-category {
     color: var(--accent-green);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .portfolio-title {
-    font-size: 22px;
-    margin: 8px 0 12px;
-    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 8px 0 10px;
+    color: #fff;
 }
 
 .portfolio-desc {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
     line-height: 1.6;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
-/* Portfolio Button */
 .btn-portfolio {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    padding: 6px 6px 6px 24px;
+    color: #fff;
+    padding: 6px 6px 6px 20px;
     border-radius: 100px;
     font-weight: 600;
+    font-size: 14px;
     transition: all 0.3s;
     display: inline-flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+    cursor: pointer;
 }
 
 .btn-portfolio .arrow {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -459,7 +468,6 @@
 .btn-portfolio .arrow svg {
     transform: rotate(-45deg);
     transition: transform 0.3s ease;
-    display: block;
 }
 
 .btn-portfolio:hover {
@@ -477,50 +485,39 @@
 }
 
 .btn-portfolio:hover .arrow svg path {
-    fill: #000000;
+    fill: #000;
 }
 
+/* --- DESKTOP: lado a lado --- */
 @media (min-width: 769px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: unset;
+        gap: 24px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .portfolio-card-wrapper {
+        position: relative;
+        /* cancela sticky no desktop */
+        padding-top: 0;
+    }
+
     .portfolio-overlay {
         transform: translateY(110%);
         opacity: 0;
     }
 
-    .btn-portfolio {
-        display: none;
-    }
-
-    .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 32px;
-        padding-bottom: 0;
-    }
-
-    .portfolio-item {
-        position: relative;
-        margin-bottom: 0;
-    }
-
-    .portfolio-item:nth-child(n) {
-        top: auto;
-        z-index: auto;
+    .portfolio-item:hover .portfolio-overlay {
+        transform: translateY(-16px);
+        opacity: 1;
     }
 
     .portfolio-section {
         padding-bottom: 120px;
     }
 }
-
-.portfolio-link-wrapper,
-.portfolio-link-wrapper:hover,
-.portfolio-link-wrapper:focus {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-
 
 /* ================================================== */
 /* ==================== REVIEWS ===================== */
@@ -821,5 +818,62 @@
         align-items: center;
     }
 }
+
+/* ================================================== */
+/* ================= CUSTOM CURSOR ================== */
+/* ================================================== */
+
+@media (min-width: 769px) {
+
+    /* Hide button and system cursor on hover */
+    .portfolio-item[data-cursor-hover="true"],
+    .portfolio-item[data-cursor-hover="true"] * {
+        cursor: none !important;
+    }
+
+    .portfolio-item[data-cursor-hover="true"] .btn-portfolio {
+        display: none !important;
+    }
 }
+
+#custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+}
+
+#custom-cursor svg {
+    /* Arrow size adjusted slightly larger */
+    width: 28px;
+    height: 28px;
+}
+
+#custom-cursor.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Adjust scale so it isn't huge but noticeable */
+#custom-cursor.active {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Hide custom cursor completely on mobile/touch interfaces */
+@media (pointer: coarse),
+(hover: none) {
+    #custom-cursor {
+        display: none !important;
+    }
 }

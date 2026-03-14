@@ -17,17 +17,18 @@
     --accent-green: #aeff2b;
 
     --border-color: #222222;
+
 }
 
 /* ===== Light Theme ===== */
 :root.light-theme {
-    --bg-primary: #ececec;
+    --bg-primary: #e1e1e1;
 
-    --bg-secondary: #f4f4f4;
+    --bg-secondary: #f1f1f1;
 
     --text-primary: #444444;
     --text-secondary: #555555;
-    --border-color: #d9d9d9;
+    --border-color: #c7c7c7;
 }
 
 ul,
@@ -114,14 +115,14 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1480px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 8px;
 }
 
 @media (min-width: 900px) {
     .container {
-        padding: 0 28px;
+        padding: 0 12px;
     }
 }
 

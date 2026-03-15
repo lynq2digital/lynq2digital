@@ -300,6 +300,7 @@ class WebsiteController {
         // Reviews Swiper
         if (document.querySelector('.reviews-swiper')) {
             new Swiper('.reviews-swiper', {
+                loop: true,
                 slidesPerView: 1,
                 spaceBetween: 20,
                 grabCursor: true,

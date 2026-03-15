@@ -46,8 +46,7 @@
             
             this.particlesArray = [];
             let numberOfParticles = (this.canvas.height * this.canvas.width) / 15000;
-            // Limit particles for performance if multiple canvases are present
-            numberOfParticles = Math.min(numberOfParticles, 100); 
+            numberOfParticles = Math.min(numberOfParticles, 100);
 
             for (let i = 0; i < numberOfParticles; i++) {
                 let size = (Math.random() * 1.5) + 1;
@@ -75,8 +74,8 @@
                 for (let b = a; b < this.particlesArray.length; b++) {
                     let distance = ((this.particlesArray[a].x - this.particlesArray[b].x) ** 2) +
                         ((this.particlesArray[a].y - this.particlesArray[b].y) ** 2);
-                    if (distance < (this.canvas.width / 7) * (this.canvas.height / 7)) {
-                        opacityValue = 0.5 - (distance / 20000);
+                    if (distance < (this.canvas.width / 5) * (this.canvas.height / 5)) {
+                        opacityValue = 0.5 - (distance / 25000);
                         if (opacityValue > 0) {
                             this.ctx.strokeStyle = `rgba(170, 170, 170, ${opacityValue})`;
                             this.ctx.lineWidth = 1;
@@ -130,7 +129,6 @@
         }
     }
 
-    // Initialize all canvases with class 'particles-canvas'
     document.addEventListener('DOMContentLoaded', () => {
         const canvases = document.querySelectorAll('.particles-canvas');
         canvases.forEach(canvas => {

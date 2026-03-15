@@ -111,6 +111,7 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     line-height: 1.6;
+    user-select: none;
 }
 
 .container {

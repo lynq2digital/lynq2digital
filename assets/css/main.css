@@ -599,8 +599,8 @@ body {
 :root.light-theme .scroll-to-top {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #757575;
-    color: #767676;
+    border: 1px solid #8a8a8a;
+    color: #848484;
 }
 
 .scroll-to-top.visible {

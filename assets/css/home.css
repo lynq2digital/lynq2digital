@@ -342,7 +342,7 @@
     overflow: hidden;
     cursor: pointer;
     border: 1px solid var(--border-color);
-    background-color: rgba(199, 199, 199, 0.05);
+    background-color: rgba(82, 82, 82, 0.08);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     /* Cinza quase transparente */

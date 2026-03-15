@@ -83,7 +83,7 @@ function connect() {
         for (let b = a; b < particlesArray.length; b++) {
             let distance = ((particlesArray[a].x - particlesArray[b].x) ** 2) +
                 ((particlesArray[a].y - particlesArray[b].y) ** 2);
-            if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+            if (distance < (canvas.width / 10) * (canvas.height / 10)) {
                 opacityValue = 0.7 - (distance / 20000);
                 ctx.strokeStyle = 'rgba(170, 170, 170,' + opacityValue + ')'; // cinza claro
                 ctx.beginPath();

@@ -234,13 +234,15 @@ class WebsiteController {
             this.themeToggleMobile.addEventListener('click', toggleTheme);
         }
 
-        // Apply saved theme or prefer-color-scheme
+        // Apply saved theme (Default is Dark Mode)
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
             root.classList.add('light-theme');
-        } else if (!savedTheme && !window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            root.classList.add('light-theme');
-            localStorage.setItem('theme', 'light');
+        } else {
+            root.classList.remove('light-theme');
+            if (!savedTheme) {
+                localStorage.setItem('theme', 'dark');
+            }
         }
     }
 

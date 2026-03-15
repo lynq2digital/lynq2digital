@@ -220,10 +220,23 @@ class WebsiteController {
 
     bindThemeToggle() {
         const root = document.documentElement;
+        const navLogo = document.getElementById('nav-logo');
+        const footerLogo = document.getElementById('footer-logo-img');
+
+        const updateLogos = (isLight) => {
+            if (navLogo) {
+                navLogo.src = isLight ? './assets/images/logo-light.webp' : './assets/images/logo.webp';
+            }
+            if (footerLogo) {
+                footerLogo.src = isLight ? './assets/images/logo-light.webp' : './assets/images/logo.webp';
+            }
+        };
 
         const toggleTheme = () => {
             root.classList.toggle('light-theme');
-            localStorage.setItem('theme', root.classList.contains('light-theme') ? 'light' : 'dark');
+            const isLight = root.classList.contains('light-theme');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            updateLogos(isLight);
         };
 
         if (this.themeToggle) {
@@ -238,8 +251,10 @@ class WebsiteController {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
             root.classList.add('light-theme');
+            updateLogos(true);
         } else {
             root.classList.remove('light-theme');
+            updateLogos(false);
             if (!savedTheme) {
                 localStorage.setItem('theme', 'dark');
             }

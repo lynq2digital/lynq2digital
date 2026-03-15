@@ -293,8 +293,8 @@ class WebsiteController {
                     prevEl: '.swiper-button-prev',
                 },
                 breakpoints: {
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
+                    768: { slidesPerView: 1 },
+                    1024: { slidesPerView: 1 },
                 },
             });
         }

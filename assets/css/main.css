@@ -599,8 +599,8 @@ body {
 :root.light-theme .scroll-to-top {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--text-primary);
-    color: var(--text-primary);
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
 }
 
 .scroll-to-top.visible {
@@ -609,15 +609,6 @@ body {
     pointer-events: auto;
 }
 
-.scroll-to-top.visible:hover {
-    background: var(--accent-green);
-    border-color: var(--accent-green);
-    color: #000;
-}
-
-.scroll-to-top.visible:hover svg {
-    stroke: #000;
-}
 
 /* WhatsApp Button */
 .whatsapp-button {

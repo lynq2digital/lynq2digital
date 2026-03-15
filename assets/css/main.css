@@ -552,9 +552,7 @@ body {
     height: 40px;
 }
 
-.theme-toggle:hover {
-    color: var(--accent-green);
-}
+
 
 /* Dark mode (default): show sun, hide moon */
 .sun-icon {
@@ -665,6 +663,10 @@ body {
         right: 30px;
         width: 56px;
         height: 56px;
+    }
+
+    .theme-toggle:hover {
+        color: var(--accent-green);
     }
 }
 

@@ -74,7 +74,7 @@
                 for (let b = a; b < this.particlesArray.length; b++) {
                     let distance = ((this.particlesArray[a].x - this.particlesArray[b].x) ** 2) +
                         ((this.particlesArray[a].y - this.particlesArray[b].y) ** 2);
-                    if (distance < (this.canvas.width / 5) * (this.canvas.height / 5)) {
+                    if (distance < (this.canvas.width / 4.8) * (this.canvas.height / 4.8)) {
                         opacityValue = 0.5 - (distance / 25000);
                         if (opacityValue > 0) {
                             this.ctx.strokeStyle = `rgba(170, 170, 170, ${opacityValue})`;

@@ -119,6 +119,8 @@ body {
     max-width: 1480px;
     margin: 0 auto;
     padding: 0 8px;
+    position: relative;
+    z-index: 1;
 }
 
 @media (min-width: 900px) {
@@ -683,8 +685,9 @@ body {
 }
 
 .section-title {
-    font-size: 40px;
+    font-size: 32px;
     margin-bottom: 24px;
+    line-height: 1.2;
 }
 
 .highlight-main {
@@ -702,6 +705,13 @@ body {
     color: var(--text-secondary);
     max-width: 600px;
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 40px;
+        line-height: 1.4;
+    }
 }
 
 /* ================================================== */

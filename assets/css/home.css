@@ -127,6 +127,14 @@
     max-width: 240px;
 }
 
+.service-title {
+    font-size: 20px;
+}
+
+.service-description {
+    font-size: 17px;
+}
+
 /* ================================================== */
 /* ==================== SOBRE (ABOUT) =============== */
 /* ================================================== */
@@ -190,7 +198,7 @@
 
 .feature-item p {
     color: var(--text-secondary);
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
     margin: 0;
 }
@@ -250,7 +258,7 @@
 }
 
 .stat-label {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--text-secondary);
     font-weight: 500;
     text-align: center;
@@ -420,7 +428,7 @@
 
 .portfolio-desc {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -664,11 +672,12 @@
 }
 
 .review-text {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.6;
     color: var(--text-secondary);
     margin-bottom: 32px;
     flex-grow: 1;
+    font-family: sans-serif;
 }
 
 .review-author {

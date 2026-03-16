@@ -43,36 +43,89 @@ class WebsiteController {
     // ========== Custom Cursor (GSAP) ==========
 
     initCustomCursor() {
-        const cursor = document.getElementById('custom-cursor');
-        if (!cursor || typeof gsap === 'undefined') return;
-
-        const hoverTargets = document.querySelectorAll('[data-cursor-hover]');
-        if (!hoverTargets.length) return;
+        if (typeof gsap === 'undefined') return;
 
         // Skip custom cursor on touch devices (mobile/tablets)
         const isTouchDevice = window.matchMedia("(pointer: coarse), (hover: none)").matches;
         if (isTouchDevice) return;
 
-        // GSAP quickTo for smooth following
-        const xTo = gsap.quickTo(cursor, 'left', { duration: 0.35, ease: 'power3' });
-        const yTo = gsap.quickTo(cursor, 'top', { duration: 0.35, ease: 'power3' });
+        const portfolioCursor = document.getElementById('custom-cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorTrail = document.querySelector('.cursor-trail');
+        const hoverTargets = document.querySelectorAll('[data-cursor-hover]');
+        const interactiveElements = document.querySelectorAll('a, button, input, textarea');
+
+        let isPortfolioHover = false;
+
+        // Animation setup for Portfolio Cursor
+        let pXTo, pYTo;
+        if (portfolioCursor) {
+            pXTo = gsap.quickTo(portfolioCursor, 'left', { duration: 0.35, ease: 'power3' });
+            pYTo = gsap.quickTo(portfolioCursor, 'top', { duration: 0.35, ease: 'power3' });
+        }
+
+        // Animation setup for Global Dot & Trail
+        let dotXTo, dotYTo, trailXTo, trailYTo;
+        if (cursorDot && cursorTrail) {
+            // Dot follows almost instantly
+            dotXTo = gsap.quickTo(cursorDot, 'left', { duration: 0.05, ease: 'power3' });
+            dotYTo = gsap.quickTo(cursorDot, 'top', { duration: 0.05, ease: 'power3' });
+            // Trail has a noticeable delay for the "rastro" effect
+            trailXTo = gsap.quickTo(cursorTrail, 'left', { duration: 0.4, ease: 'power3' });
+            trailYTo = gsap.quickTo(cursorTrail, 'top', { duration: 0.4, ease: 'power3' });
+        }
 
         // Track mouse globally
         window.addEventListener('mousemove', (e) => {
-            xTo(e.clientX);
-            yTo(e.clientY);
+            if (pXTo && pYTo) {
+                pXTo(e.clientX);
+                pYTo(e.clientY);
+            }
+
+            if (dotXTo && dotYTo && trailXTo && trailYTo) {
+                dotXTo(e.clientX);
+                dotYTo(e.clientY);
+                trailXTo(e.clientX);
+                trailYTo(e.clientY);
+
+                // Show dot and trail on first move if not over portfolio
+                if (!isPortfolioHover) {
+                    gsap.to([cursorDot, cursorTrail], { opacity: 1, duration: 0.3 });
+                }
+            }
         });
 
-        // Show / hide on portfolio items
-        hoverTargets.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.classList.add('active');
-            });
+        // Hover effect for Interactive Elements (expand trail)
+        if (cursorTrail) {
+            interactiveElements.forEach(el => {
+                // Ignore elements that trigger portfolio cursor to avoid conflict
+                if (el.closest('[data-cursor-hover]')) return;
 
-            el.addEventListener('mouseleave', () => {
-                cursor.classList.remove('active');
+                el.addEventListener('mouseenter', () => cursorTrail.classList.add('hovered'));
+                el.addEventListener('mouseleave', () => cursorTrail.classList.remove('hovered'));
             });
-        });
+        }
+
+        // Show / hide portfolio cursor vs global cursor
+        if (hoverTargets.length) {
+            hoverTargets.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    isPortfolioHover = true;
+                    if (portfolioCursor) portfolioCursor.classList.add('active');
+                    if (cursorDot && cursorTrail) {
+                        gsap.to([cursorDot, cursorTrail], { opacity: 0, scale: 0, duration: 0.2 });
+                    }
+                });
+
+                el.addEventListener('mouseleave', () => {
+                    isPortfolioHover = false;
+                    if (portfolioCursor) portfolioCursor.classList.remove('active');
+                    if (cursorDot && cursorTrail) {
+                        gsap.to([cursorDot, cursorTrail], { opacity: 1, scale: 1, duration: 0.2 });
+                    }
+                });
+            });
+        }
     }
 
     // ========== Header / Menu ==========

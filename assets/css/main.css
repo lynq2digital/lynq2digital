@@ -518,8 +518,8 @@ body {
     display: block;
     padding: 12px 16px;
     font-size: 18px;
-    font-weight: 500;
-    border-radius: 12px;
+    font-weight: bolder;
+
     transition: all 0.3s;
 }
 

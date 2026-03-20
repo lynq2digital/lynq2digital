@@ -349,8 +349,12 @@
     overflow: hidden;
     cursor: pointer;
     border: 1px solid var(--border-color);
-    background-color: #aaaaaa;
+    background-color: #131313;
 
+}
+
+:root.light-theme .portfolio-item {
+    background-color: #f1f1f1;
 }
 
 .portfolio-image {
@@ -360,6 +364,15 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.5s ease;
+}
+
+/* Images by Theme */
+#card1 .portfolio-image {
+    background-image: url('../images/project-1-dark.png');
+}
+
+:root.light-theme #card1 .portfolio-image {
+    background-image: url('../images/project-1.png');
 }
 
 .portfolio-item:hover .portfolio-image {
@@ -384,6 +397,16 @@
     left: 24px;
     z-index: 4;
     transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+}
+
+/* Mobile Center Alignment Only */
+@media (max-width: 768px) {
+    .portfolio-overlay {
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .portfolio-category,
@@ -417,7 +440,24 @@
 .btn-portfolio {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    color: #fff;
+    color: var(--text-primary);
+    padding: 6px 6px 6px 20px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+:root.light-theme .btn-portfolio {
+    background: transparent;
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
     padding: 6px 6px 6px 20px;
     border-radius: 100px;
     font-weight: 600;
@@ -433,12 +473,17 @@
 
 .btn-portfolio span {
     color: #fff;
+    transition: color 0.3s ease;
+}
+
+:root.light-theme .btn-portfolio span {
+    color: var(--text-primary);
 }
 
 
 .btn-portfolio .arrow {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--text-primary);
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -447,6 +492,21 @@
     justify-content: center;
     transition: all 0.3s;
 }
+
+:root.light-theme .btn-portfolio .arrow {
+    border: 1px solid var(--text-primary);
+}
+
+.btn-portfolio .arrow svg path {
+    fill: #fff;
+    transition: fill 0.3s ease;
+}
+
+:root.light-theme .btn-portfolio .arrow svg path {
+    fill: var(--text-primary);
+}
+
+
 
 .btn-portfolio .arrow svg {
     transform: rotate(-45deg);
@@ -491,6 +551,9 @@
         padding: 24px 20px;
         transform: translateY(110%);
         opacity: 0;
+        display: block;
+        /* Garante layout original no desktop */
+        text-align: left;
     }
 
     .portfolio-category,

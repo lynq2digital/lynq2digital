@@ -40,7 +40,9 @@ class WebsiteController {
         window.addEventListener('resize', () => this.handleResize());
     }
 
-    // ========== Custom Cursor (GSAP) ==========
+    // =======================================================
+    // ================== CUSTOM CURSOR ======================
+    // =======================================================
 
     initCustomCursor() {
         if (typeof gsap === 'undefined') return;
@@ -128,7 +130,9 @@ class WebsiteController {
         }
     }
 
-    // ========== Header / Menu ==========
+    // =======================================================
+    // ================== HEADER SECTION =====================
+    // =======================================================
 
     bindMenuToggle() {
         if (!this.menuBtn) return;
@@ -243,7 +247,9 @@ class WebsiteController {
         }
     }
 
-    // ========== Scroll To Top ==========
+    // =======================================================
+    // ================== SCROLL TO TOP ======================
+    // =======================================================
 
     bindScrollToTop() {
         if (!this.scrollToTopBtn) return;
@@ -269,7 +275,9 @@ class WebsiteController {
         }
     }
 
-    // ========== Theme Toggle ==========
+    // =======================================================
+    // ================== THEME TOGGLE =======================
+    // =======================================================
 
     bindThemeToggle() {
         const root = document.documentElement;
@@ -314,7 +322,9 @@ class WebsiteController {
         }
     }
 
-    // ========== Swiper ==========
+    // =======================================================
+    // ================== SWIPER INITIALIZATION ==============
+    // =======================================================
 
     initSwiper() {
         if (typeof Swiper === 'undefined') return;
@@ -389,7 +399,9 @@ class WebsiteController {
         }
     }
 
-    // ========== FAQ Accordion ==========
+    // =======================================================
+    // ================== FAQ ACCORDION ======================
+    // =======================================================
 
     initFAQ() {
         const faqItems = document.querySelectorAll('.faq-item');
@@ -414,7 +426,9 @@ class WebsiteController {
         });
     }
 
-    // ========== Scroll Animations ==========
+    // =======================================================
+    // ================== SCROLL ANIMATIONS ==================
+    // =======================================================
 
     initScrollAnimations() {
         // Standard observer for individual elements
@@ -477,7 +491,9 @@ class WebsiteController {
         animateElements('.blog-card');
     }
 
-    // ========== Category Strip ==========
+    // =======================================================
+    // ================== CATEGORY STRIP =====================
+    // =======================================================
 
     initCategoryStrip() {
         const content = document.querySelector('.category-strip-content');
@@ -522,7 +538,9 @@ class WebsiteController {
         });
     }
 
-    // ========== Contact Form ==========
+    // =======================================================
+    // ================== CONTACT FORM =======================
+    // =======================================================
 
     initContactForm() {
         const contactForm = document.querySelector('.contact-form');

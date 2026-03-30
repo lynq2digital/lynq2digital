@@ -1,990 +1,1515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Lynk2 Digital - Desenvolvimento web profissional. Criamos websites modernos, rápidos e otimizados para converter visitantes em clientes. Especialistas em UI/UX e full-stack." />
+    <meta
+      name="description"
+      content="Lynk2 Digital - Desenvolvimento web profissional. Criamos websites modernos, rápidos e otimizados para converter visitantes em clientes. Especialistas em UI/UX e full-stack."
+    />
 
     <title>Lynq2 Digital</title>
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="icon" type="image/png" href="./favicon.png" />
 
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- Font Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- ======================================================= -->
     <!-- ================== HEADER SECTION ===================== -->
     <!-- ======================================================= -->
     <header class="header">
-        <div class="container">
-            <div class="barra" id="barra">
-
-                <div class="barra-topo">
-
-
-                    <div class="logo-icon">
-                        <img src="./assets/images/logo.webp" id="nav-logo">
-                    </div>
-
-
-                    <nav class="nav-desktop">
-                        <ul>
-                            <li><a href="#hero">Início</a></li>
-                            <li><a href="#services" class="nav-item-flex">Serviços <span class="nav-badge">5</span></a>
-                            </li>
-                            <li><a href="#sobre">Sobre</a></li>
-                            <li><a href="#portfolio">Portfólio</a></li>
-                            <li><a href="#contato">Contato</a></li>
-                        </ul>
-                    </nav>
-
-                    <div class="header-actions">
-
-                        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
-
-                            <!-- Sun Icon -->
-                            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="5"></circle>
-                                <line x1="12" y1="1" x2="12" y2="3"></line>
-                                <line x1="12" y1="21" x2="12" y2="23"></line>
-                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                                <line x1="1" y1="12" x2="3" y2="12"></line>
-                                <line x1="21" y1="12" x2="23" y2="12"></line>
-                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                            </svg>
-
-                            <!-- Moon Icon -->
-                            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                            </svg>
-
-                        </button>
-
-                        <a href="#contato" class="btn-primary">
-                            <span>Fale Conosco</span>
-                            <div class="arrow">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                    <path fill="#ffffff"
-                                        d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </a>
-
-                    </div>
-
-                    <div class="menu-btn" id="menu-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                </div>
-
-                <nav class="nav-mobile">
-                    <ul class="nav-mobile-list">
-                        <li><a href="#hero">Início</a></li>
-                        <li><a href="#services" class="nav-item-flex">Serviços <span class="nav-badge">5</span></a>
-                        </li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                    <a href="#contato" class="btn-primary nav-mobile-btn">
-                        <span>Fale Conosco</span>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                <path fill="#ffffff"
-                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                </path>
-                            </svg>
-                        </div>
-                    </a>
-                </nav>
+      <div class="container">
+        <div class="barra" id="barra">
+          <div class="barra-topo">
+            <div class="logo-icon">
+              <img src="./assets/images/logo.webp" id="nav-logo" />
             </div>
+
+            <nav class="nav-desktop">
+              <ul>
+                <li><a href="#hero">Início</a></li>
+                <li>
+                  <a href="#services" class="nav-item-flex"
+                    >Serviços <span class="nav-badge">5</span></a
+                  >
+                </li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+              </ul>
+            </nav>
+
+            <div class="header-actions">
+              <button
+                class="theme-toggle"
+                id="theme-toggle"
+                aria-label="Alternar tema"
+              >
+                <!-- Sun Icon -->
+                <svg
+                  class="sun-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+
+                <!-- Moon Icon -->
+                <svg
+                  class="moon-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                  ></path>
+                </svg>
+              </button>
+
+              <a href="#contato" class="btn-primary">
+                <span>Fale Conosco</span>
+                <div class="arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#ffffff"
+                      d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div class="menu-btn" id="menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <nav class="nav-mobile">
+            <ul class="nav-mobile-list">
+              <li><a href="#hero">Início</a></li>
+              <li>
+                <a href="#services" class="nav-item-flex"
+                  >Serviços <span class="nav-badge">5</span></a
+                >
+              </li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+            <a href="#contato" class="btn-primary nav-mobile-btn">
+              <span>Fale Conosco</span>
+              <div class="arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="#ffffff"
+                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </nav>
         </div>
+      </div>
     </header>
 
     <main>
-        <!-- ======================================================= -->
-        <!-- ================== HERO SECTION ======================= -->
-        <!-- ======================================================= -->
-        <section class="hero" id="hero">
-            <canvas id="canvas1"></canvas>
-            <div class="container">
-                <div class="hero-content">
+      <!-- ======================================================= -->
+      <!-- ================== HERO SECTION ======================= -->
+      <!-- ======================================================= -->
+      <section class="hero" id="hero">
+        <canvas id="canvas1"></canvas>
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Transforme sua Visão em <br />
+              <span class="highlight-main">Realidade Digital</span>
+            </h1>
+            <p class="hero-description">
+              Criamos websites modernos, rápidos e otimizados para converter
+              visitantes em clientes. Especialistas em desenvolvimento web
+              full-stack.
+            </p>
+            <div class="hero-buttons">
+              <a href="#contato" class="btn-primary">
+                <span>Iniciar Projeto</span>
+                <div class="arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#ffffff"
+                      d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+              <a href="#portfolio" class="btn-secondary">Ver Portfólio</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <h1 class="hero-title">
-                        Transforme sua Visão em <br>
-                        <span class="highlight-main">Realidade Digital</span>
-                    </h1>
-                    <p class="hero-description">
-                        Criamos websites modernos, rápidos e otimizados para converter visitantes em clientes.
-                        Especialistas em desenvolvimento web full-stack.
+      <!-- ======================================================= -->
+      <!-- ================== CATEGORY STRIP ===================== -->
+      <!-- ======================================================= -->
+      <section class="category-strip">
+        <div class="category-strip-content">
+          <span>Web Design</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+
+          <span>Sistemas Web</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+          <span>E-commerce</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+          <span>SEO</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+
+          <span>Desenvolvimento Web</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+
+          <span>E-commerce</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+          <span>SEO</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+          <span>Mais Vendas</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+          <span>Mais Clientes</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+
+          <span>E-commerce</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+
+          <span>Web Design</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+
+          <span>ADS</span
+          ><span class="separator"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 14 14"
+            >
+              <!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
+                clip-rule="evenodd"
+              /></svg
+          ></span>
+        </div>
+      </section>
+
+      <!-- ======================================================= -->
+      <!-- ================== SERVICES SECTION =================== -->
+      <!-- ======================================================= -->
+      <section class="services-section" id="services">
+        <canvas class="particles-canvas"></canvas>
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Especialidades</div>
+            <h2 class="section-title">Nossas Soluções</h2>
+            <p class="section-description">
+              Oferecemos um conjunto completo de serviços digitais para
+              impulsionar seu negócio.
+            </p>
+          </div>
+
+          <div class="swiper services-swiper">
+            <div class="swiper-wrapper">
+              <!-- Service 1 -->
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect
+                        x="2"
+                        y="3"
+                        width="20"
+                        height="14"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                  </div>
+                  <h3 class="service-title">Websites Institucionais</h3>
+                  <p class="service-description">
+                    Sites profissionais que fortalecem sua marca e comunicam
+                    seus valores de forma clara e impactante.
+                  </p>
+                  <a href="" class="btn-primary">
+                    <span>Saiba Mais</span>
+                    <div class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <line x1="3" y1="9" x2="21" y2="9"></line>
+                      <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                  </div>
+                  <h3 class="service-title">Landing Pages</h3>
+                  <p class="service-description">
+                    Páginas focadas em conversão, otimizadas para campanhas de
+                    marketing e vendas.
+                  </p>
+                  <a href="" class="btn-primary">
+                    <span>Saiba Mais</span>
+                    <div class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <h3 class="service-title">Web Apps</h3>
+                  <p class="service-description">
+                    Aplicações web personalizadas para automatizar processos e
+                    gerenciar seu negócio.
+                  </p>
+                  <a href="" class="btn-primary">
+                    <span>Saiba Mais</span>
+                    <div class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="9" cy="21" r="1"></circle>
+                      <circle cx="20" cy="21" r="1"></circle>
+                      <path
+                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="service-title">E-commerce</h3>
+                  <p class="service-description">
+                    Lojas virtuais completas e seguras para você vender seus
+                    produtos online com alta performance.
+                  </p>
+                  <a href="" class="btn-primary">
+                    <span>Saiba Mais</span>
+                    <div class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="swiper-slide">
+                <div class="service-card">
+                  <div class="service-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="service-title">Manutenção & Suporte</h3>
+                  <p class="service-description">
+                    Suporte contínuo e manutenção preventiva para manter seu
+                    site sempre atualizado e seguro.
+                  </p>
+                  <a href="" class="btn-primary">
+                    <span>Saiba Mais</span>
+                    <div class="arrow">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="#ffffff"
+                          d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="services-nav">
+              <button class="services-btn-prev" aria-label="Anterior">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="services-btn-next" aria-label="Próximo">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 6 15 12 9 18"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================= -->
+      <!-- ================== SOBRE SECTION ====================== -->
+      <!-- ======================================================= -->
+      <section class="sobre-section" id="sobre">
+        <div class="container">
+          <div class="sobre-content">
+            <div class="sobre-left">
+              <div class="section-badge">Sobre a Lynq2</div>
+              <h2 class="section-title">
+                Impulsionando Negócios através da
+                <span class="highlight">Excelência Digital</span>
+              </h2>
+
+              <div class="sobre-features">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <circle cx="12" cy="12" r="6" />
+                      <circle cx="12" cy="12" r="2" />
+                    </svg>
+                  </div>
+                  <p>
+                    <strong>Estratégia Personalizada:</strong> Cada projeto é
+                    único e desenhado para atender às necessidades específicas
+                    do seu negócio.
+                  </p>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                      <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                      <path d="M2 2l7.5 1.5" />
+                      <path d="M7 11c.1-2 1.2-4.2 3-5.4 2.1-1.4 4.8-1.5 7-.3" />
+                    </svg>
+                  </div>
+                  <p>
+                    <strong>Design Centrado no Usuário:</strong> Criamos
+                    interfaces intuitivas que proporcionam a melhor experiência
+                    para seus clientes.
+                  </p>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="m5.65 10.025l1.95.825q.35-.7.725-1.35t.825-1.3l-1.4-.275zM9.2 12.1l2.85 2.825q1.05-.4 2.25-1.225t2.25-1.875q1.75-1.75 2.738-3.887T20.15 4q-1.8-.125-3.95.863T12.3 7.6q-1.05 1.05-1.875 2.25T9.2 12.1m4.45-1.625q-.575-.575-.575-1.412t.575-1.413t1.425-.575t1.425.575t.575 1.413t-.575 1.412t-1.425.575t-1.425-.575m.475 8.025l2.1-2.1l-.275-1.4q-.65.45-1.3.812t-1.35.713zM21.95 2.175q.475 3.025-.587 5.888T17.7 13.525L18.2 16q.1.5-.05.975t-.5.825l-4.2 4.2l-2.1-4.925L7.075 12.8L2.15 10.7l4.175-4.2q.35-.35.838-.5t.987-.05l2.475.5q2.6-2.6 5.45-3.675t5.875-.6m-18.025 13.8q.875-.875 2.138-.887t2.137.862t.863 2.138t-.888 2.137q-.625.625-2.087 1.075t-4.038.8q.35-2.575.8-4.038t1.075-2.087m1.425 1.4q-.25.25-.5.913t-.35 1.337q.675-.1 1.338-.337t.912-.488q.3-.3.325-.725T6.8 17.35t-.725-.288t-.725.313"
+                      />
+                    </svg>
+                  </div>
+                  <p>
+                    <strong>Foco em Resultados:</strong> Utilizamos as
+                    ferramentas mais modernas para garantir velocidade,
+                    conversão e escalabilidade.
+                  </p>
+                </div>
+              </div>
+              <div class="sobre-cta">
+                <a href="#contato" class="btn-primary">
+                  <span>Saber Mais</span>
+                  <div class="arrow">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#ffffff"
+                        d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="sobre-right">
+              <div class="sobre-stats">
+                <div class="stat-item">
+                  <span class="stat-number">100+</span>
+                  <span class="stat-label">Projetos Entregues</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Foco no Cliente</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">5+</span>
+                  <span class="stat-label">Anos de Mercado</span>
+                </div>
+              </div>
+              <div class="sobre-image">
+                <img
+                  src="./assets/images/about-2.webp"
+                  alt="Performance e Resultados"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================= -->
+      <!-- ================== PORTFOLIO SECTION ================== -->
+      <!-- ======================================================= -->
+      <section class="portfolio-section" id="portfolio">
+        <canvas class="particles-canvas"></canvas>
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Portfólio</div>
+            <h2 class="section-title">Trabalhos Recentes</h2>
+            <p class="section-description">
+              Confira alguns dos projetos que desenvolvemos para nossos
+              clientes.
+            </p>
+          </div>
+
+          <div class="portfolio-grid">
+            <!-- Card 1 -->
+            <div class="portfolio-card-wrapper" id="card1">
+              <div class="portfolio-item" data-cursor-hover="true">
+                <a
+                  href="https://jenssolucoes.com.br"
+                  target="_blank"
+                  class="portfolio-link-wrapper"
+                >
+                  <div class="portfolio-image"></div>
+                  <div class="portfolio-overlay">
+                    <span class="portfolio-category">Website</span>
+                    <h3 class="portfolio-title">Website Institucional</h3>
+                    <p class="portfolio-desc">
+                      Website desenvolvido para empresa especializada em
+                      manutenção elétrica e hidráulica em Curitiba.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="#contato" class="btn-primary">
-                            <span>Iniciar Projeto</span>
-                            <div class="arrow">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                    <path fill="#ffffff"
-                                        d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </a>
-                        <a href="#portfolio" class="btn-secondary">Ver Portfólio</a>
+                    <div class="btn-portfolio">
+                      <span>Ver Projeto</span>
+                      <div class="arrow">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                          />
+                        </svg>
+                      </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======================================================= -->
-        <!-- ================== CATEGORY STRIP ===================== -->
-        <!-- ======================================================= -->
-        <section class="category-strip">
-            <div class="category-strip-content">
-                <span>Web Design</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                        height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-
-                <span>Sistemas Web</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                        height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-                <span>E-commerce</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                        height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-                <span>SEO</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-
-                <span>Desenvolvimento Web</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg"
-                        width="32" height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-
-                <span>E-commerce</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                        height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-                <span>SEO</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-                <span>Mais Vendas</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                        height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-                <span>Mais Clientes</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                        height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-
-                <span>E-commerce</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                        height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-
-                <span>Web Design</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                        height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-
-
-                <span>ADS</span><span class="separator"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                        viewBox="0 0 14 14"><!-- Icon from Streamline by Streamline - https://creativecommons.org/licenses/by/4.0/ -->
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 .09a1 1 0 0 1 1 1v4.088l3.463-2.204a1 1 0 0 1 1.074 1.688L8.863 7l3.674 2.338a1 1 0 0 1-1.074 1.688L8 8.822v4.087a1 1 0 1 1-2 0V8.822l-3.463 2.204a1 1 0 1 1-1.074-1.688L5.137 7L1.463 4.662a1 1 0 1 1 1.074-1.688L6 5.178V1.091a1 1 0 0 1 1-1"
-                            clip-rule="evenodd" />
-                    </svg></span>
-
+                  </div>
+                </a>
+              </div>
             </div>
 
-        </section>
-
-
-
-
-
-        <!-- ======================================================= -->
-        <!-- ================== SERVICES SECTION =================== -->
-        <!-- ======================================================= -->
-        <section class="services-section" id="services">
-            <canvas class="particles-canvas"></canvas>
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">Especialidades</div>
-                    <h2 class="section-title">Nossas Soluções</h2>
-                    <p class="section-description">
-                        Oferecemos um conjunto completo de serviços digitais para impulsionar seu negócio.
+            <!-- Card 2 -->
+            <div class="portfolio-card-wrapper" id="card2">
+              <div class="portfolio-item" data-cursor-hover="true">
+                <a
+                  href="https://tech-42q.pages.dev/"
+                  target="_blank"
+                  class="portfolio-link-wrapper"
+                >
+                  <div class="portfolio-image"></div>
+                  <div class="portfolio-overlay">
+                    <span class="portfolio-category">Website</span>
+                    <h3 class="portfolio-title">Website Institucional</h3>
+                    <p class="portfolio-desc">
+                      Website desenvolvido para empresa especializada em TI e
+                      Telecomunicações em Curitiba.
                     </p>
-                </div>
-
-                <div class="swiper services-swiper">
-                    <div class="swiper-wrapper">
-                        <!-- Service 1 -->
-                        <div class="swiper-slide">
-                            <div class="service-card">
-                                <div class="service-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                                    </svg>
-                                </div>
-                                <h3 class="service-title">Websites Institucionais</h3>
-                                <p class="service-description">
-                                    Sites profissionais que fortalecem sua marca e comunicam seus valores de forma clara
-                                    e
-                                    impactante.
-                                </p>
-                                <a href="" class="btn-primary">
-                                    <span>Saiba Mais</span>
-                                    <div class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24">
-                                            <path fill="#ffffff"
-                                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Service 2 -->
-                        <div class="swiper-slide">
-                            <div class="service-card">
-                                <div class="service-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                        <line x1="3" y1="9" x2="21" y2="9"></line>
-                                        <line x1="9" y1="21" x2="9" y2="9"></line>
-                                    </svg>
-                                </div>
-                                <h3 class="service-title">Landing Pages</h3>
-                                <p class="service-description">
-                                    Páginas focadas em conversão, otimizadas para campanhas de marketing e vendas.
-                                </p>
-                                <a href="" class="btn-primary">
-                                    <span>Saiba Mais</span>
-                                    <div class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24">
-                                            <path fill="#ffffff"
-                                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Service 3 -->
-                        <div class="swiper-slide">
-                            <div class="service-card">
-                                <div class="service-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="9" cy="7" r="4"></circle>
-                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                    </svg>
-                                </div>
-                                <h3 class="service-title">Web Apps</h3>
-                                <p class="service-description">
-                                    Aplicações web personalizadas para automatizar processos e gerenciar seu negócio.
-                                </p>
-                                <a href="" class="btn-primary">
-                                    <span>Saiba Mais</span>
-                                    <div class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24">
-                                            <path fill="#ffffff"
-                                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Service 4 -->
-                        <div class="swiper-slide">
-                            <div class="service-card">
-                                <div class="service-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <circle cx="9" cy="21" r="1"></circle>
-                                        <circle cx="20" cy="21" r="1"></circle>
-                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <h3 class="service-title">E-commerce</h3>
-                                <p class="service-description">
-                                    Lojas virtuais completas e seguras para você vender seus produtos online com alta
-                                    performance.
-                                </p>
-                                <a href="" class="btn-primary">
-                                    <span>Saiba Mais</span>
-                                    <div class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24">
-                                            <path fill="#ffffff"
-                                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Service 5 -->
-                        <div class="swiper-slide">
-                            <div class="service-card">
-                                <div class="service-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path
-                                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <h3 class="service-title">Manutenção & Suporte</h3>
-                                <p class="service-description">
-                                    Suporte contínuo e manutenção preventiva para manter seu site sempre atualizado e
-                                    seguro.
-                                </p>
-                                <a href="" class="btn-primary">
-                                    <span>Saiba Mais</span>
-                                    <div class="arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 24 24">
-                                            <path fill="#ffffff"
-                                                d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="btn-portfolio">
+                      <span>Ver Projeto</span>
+                      <div class="arrow">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                          />
+                        </svg>
+                      </div>
                     </div>
-                    <div class="services-nav">
-                        <button class="services-btn-prev" aria-label="Anterior">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="15 18 9 12 15 6"></polyline>
-                            </svg>
-                        </button>
-                        <button class="services-btn-next" aria-label="Próximo">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="9 6 15 12 9 18"></polyline>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                  </div>
+                </a>
+              </div>
             </div>
-        </section>
 
-        <!-- ======================================================= -->
-        <!-- ================== SOBRE SECTION ====================== -->
-        <!-- ======================================================= -->
-        <section class="sobre-section" id="sobre">
-            <div class="container">
-                <div class="sobre-content">
-                    <div class="sobre-left">
-                        <div class="section-badge">Sobre a Lynq2</div>
-                        <h2 class="section-title">Impulsionando Negócios através da <span class="highlight">Excelência
-                                Digital</span></h2>
-
-                        <div class="sobre-features">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <circle cx="12" cy="12" r="6" />
-                                        <circle cx="12" cy="12" r="2" />
-                                    </svg>
-                                </div>
-                                <p><strong>Estratégia Personalizada:</strong> Cada projeto é único e desenhado para
-                                    atender às necessidades específicas do seu negócio.</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                                        <path d="M2 2l7.5 1.5" />
-                                        <path d="M7 11c.1-2 1.2-4.2 3-5.4 2.1-1.4 4.8-1.5 7-.3" />
-                                    </svg>
-                                </div>
-                                <p><strong>Design Centrado no Usuário:</strong> Criamos interfaces intuitivas que
-                                    proporcionam a melhor experiência para seus clientes.</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path fill="currentColor"
-                                            d="m5.65 10.025l1.95.825q.35-.7.725-1.35t.825-1.3l-1.4-.275zM9.2 12.1l2.85 2.825q1.05-.4 2.25-1.225t2.25-1.875q1.75-1.75 2.738-3.887T20.15 4q-1.8-.125-3.95.863T12.3 7.6q-1.05 1.05-1.875 2.25T9.2 12.1m4.45-1.625q-.575-.575-.575-1.412t.575-1.413t1.425-.575t1.425.575t.575 1.413t-.575 1.412t-1.425.575t-1.425-.575m.475 8.025l2.1-2.1l-.275-1.4q-.65.45-1.3.812t-1.35.713zM21.95 2.175q.475 3.025-.587 5.888T17.7 13.525L18.2 16q.1.5-.05.975t-.5.825l-4.2 4.2l-2.1-4.925L7.075 12.8L2.15 10.7l4.175-4.2q.35-.35.838-.5t.987-.05l2.475.5q2.6-2.6 5.45-3.675t5.875-.6m-18.025 13.8q.875-.875 2.138-.887t2.137.862t.863 2.138t-.888 2.137q-.625.625-2.087 1.075t-4.038.8q.35-2.575.8-4.038t1.075-2.087m1.425 1.4q-.25.25-.5.913t-.35 1.337q.675-.1 1.338-.337t.912-.488q.3-.3.325-.725T6.8 17.35t-.725-.288t-.725.313" />
-                                    </svg>
-                                </div>
-                                <p><strong>Foco em Resultados:</strong> Utilizamos as ferramentas mais modernas para
-                                    garantir velocidade, conversão e escalabilidade.</p>
-                            </div>
-                        </div>
-                        <div class="sobre-cta">
-                            <a href="#contato" class="btn-primary">
-                                <span>Saber Mais</span>
-                                <div class="arrow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                        <path fill="#ffffff"
-                                            d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="sobre-right">
-                        <div class="sobre-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">100+</span>
-                                <span class="stat-label">Projetos Entregues</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Foco no Cliente</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">5+</span>
-                                <span class="stat-label">Anos de Mercado</span>
-                            </div>
-                        </div>
-                        <div class="sobre-image">
-                            <img src="./assets/images/about-2.webp" alt="Performance e Resultados">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======================================================= -->
-        <!-- ================== PORTFOLIO SECTION ================== -->
-        <!-- ======================================================= -->
-        <section class="portfolio-section" id="portfolio">
-            <canvas class="particles-canvas"></canvas>
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">Portfólio</div>
-                    <h2 class="section-title">Trabalhos Recentes</h2>
-                    <p class="section-description">Confira alguns dos projetos que desenvolvemos para nossos clientes.
+            <!-- Card 1 -->
+            <div class="portfolio-card-wrapper" id="card3">
+              <div class="portfolio-item" data-cursor-hover="true">
+                <a
+                  href="https://jenssolucoes.com.br"
+                  target="_blank"
+                  class="portfolio-link-wrapper"
+                >
+                  <div class="portfolio-image"></div>
+                  <div class="portfolio-overlay">
+                    <span class="portfolio-category">Sistema</span>
+                    <h3 class="portfolio-title">Sistema de Gestão</h3>
+                    <p class="portfolio-desc">
+                      Sistema desenvolvido para auxilio de prestadores de
+                      serviços, na gestão de serviços e clientes.
                     </p>
-                </div>
-
-                <div class="portfolio-grid">
-
-                    <!-- Card 1 -->
-                    <div class="portfolio-card-wrapper" id="card1">
-                        <div class="portfolio-item" data-cursor-hover="true">
-                            <a href="https://jenssolucoes.com.br" target="_blank" class="portfolio-link-wrapper">
-                                <div class="portfolio-image">
-                                </div>
-                                <div class="portfolio-overlay">
-                                    <span class="portfolio-category">Website</span>
-                                    <h3 class="portfolio-title">Website Institucional</h3>
-                                    <p class="portfolio-desc">Website desenvolvido para empresa especializada em
-                                        manutenção elétrica e hidráulica em Curitiba.</p>
-                                    <div class="btn-portfolio">
-                                        <span>Ver Projeto</span>
-                                        <div class="arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                                viewBox="0 0 24 24">
-                                                <path
-                                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="btn-portfolio">
+                      <span>Ver Projeto</span>
+                      <div class="arrow">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z"
+                          />
+                        </svg>
+                      </div>
                     </div>
-
-                    <!-- Card 2 -->
-                    <div class="portfolio-card-wrapper" id="card2">
-                        <div class="portfolio-item" data-cursor-hover="true">
-                            <a href="#" class="portfolio-link-wrapper">
-                                <div class="portfolio-image"
-                                    style="background-image: url('./assets/images/project-2.webp');">
-                                </div>
-                                <div class="portfolio-overlay">
-                                    <span class="portfolio-category">Landing Page</span>
-                                    <h3 class="portfolio-title">Página de Conversão</h3>
-                                    <p class="portfolio-desc">Landing page com alta taxa de conversão para campanha de
-                                        marketing digital.</p>
-                                    <div class="btn-portfolio">
-                                        <span>Ver Projeto</span>
-                                        <div class="arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                                viewBox="0 0 24 24">
-                                                <path
-                                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="portfolio-card-wrapper" id="card3">
-                        <div class="portfolio-item" data-cursor-hover="true">
-                            <a href="#" class="portfolio-link-wrapper">
-                                <div class="portfolio-image"
-                                    style="background-image: url('./assets/images/project-3.webp');">
-                                </div>
-                                <div class="portfolio-overlay">
-                                    <span class="portfolio-category">Sistema Web</span>
-                                    <h3 class="portfolio-title">Dashboard Administrativo</h3>
-                                    <p class="portfolio-desc">Sistema completo de gestão com relatórios e analytics em
-                                        tempo real.</p>
-                                    <div class="btn-portfolio">
-                                        <span>Ver Projeto</span>
-                                        <div class="arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                                viewBox="0 0 24 24">
-                                                <path
-                                                    d="M16.15 13H5q-.425 0-.712-.288T4 12t.288-.712T5 11h11.15L13.3 8.15q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L19.3 11.3q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.575 4.575q-.3.3-.712.288t-.713-.313q-.275-.3-.288-.7t.288-.7z" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
+                  </div>
+                </a>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- ======================================================= -->
-        <!-- ====================== REVIEWS ======================== -->
-        <!-- ======================================================= -->
-        <section class="reviews-section" id="reviews">
-            <div class="container reviews-split">
-                <div class="reviews-left">
-                    <div class="section-header">
-                        <div class="section-badge">Depoimentos</div>
-                        <h2 class="section-title">Quem Conhece,<br><strong><span class="highlight">Ama</span></strong> o
-                            Nosso
-                            Trabalho,<br><strong><span class="highlight">Indica e Confia</span></strong></h2>
-                    </div>
-                </div>
-                <div class="reviews-right">
-                    <div class="swiper reviews-swiper">
-                        <div class="swiper-wrapper">
-
-
-                            <!-- Review 2 -->
-                            <div class="swiper-slide">
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <div class="review-avatar">
-                                            <img src="./assets/images/pessoa-1.png" alt="Foto Revisor">
-                                        </div>
-                                        <div class="review-stars">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="review-text">Obrigada por estarem fazendo um bom trabalho, a gente
-                                        está
-                                        muito feliz, tem muita gente ligando e procurando a gente pelos advertising,
-                                        isso é muito positivo, sinal que está funcionando bem, então quero
-                                        agradecer.
-                                        Muito sucesso!</p>
-                                    <div class="review-author">
-                                        <strong>Esmeralda Angelita</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Review 3 -->
-                            <div class="swiper-slide">
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <div class="review-avatar">
-                                            <img src="./assets/images/pessoa-2.png" alt="Foto Revisor">
-                                        </div>
-                                        <div class="review-stars">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="review-text">Profissionais atenciosos e ágeis. O layout do novo site
-                                        ficou
-                                        moderno, muito mais rápido e focado em converter leads. Estamos super
-                                        felizes
-                                        com o resultado.</p>
-                                    <div class="review-author">
-                                        <strong>Carlos Sales</strong>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Review 4 -->
-                            <div class="swiper-slide">
-                                <div class="review-card">
-                                    <div class="review-header">
-                                        <div class="review-avatar">
-                                            <img src="./assets/images/pessoa-3.png" alt="Foto Revisor">
-                                        </div>
-                                        <div class="review-stars">
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
-                                                stroke="currentColor" stroke-width="2">
-                                                <polygon
-                                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                                </polygon>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="review-text">Entregaram muito mais do que esperávamos. Além do site
-                                        bonito, nos ajudaram com o desempenho e na otimização de conversão. Equipe
-                                        simplesmente fantástica!</p>
-                                    <div class="review-author">
-                                        <strong>Rita Albuquerque</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reviews-nav">
-                            <button class="reviews-btn-prev" aria-label="Anterior">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="15 18 9 12 15 6"></polyline>
-                                </svg>
-                            </button>
-                            <button class="reviews-btn-next" aria-label="Próximo">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="9 6 15 12 9 18"></polyline>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+      <!-- ======================================================= -->
+      <!-- ====================== REVIEWS ======================== -->
+      <!-- ======================================================= -->
+      <section class="reviews-section" id="reviews">
+        <div class="container reviews-split">
+          <div class="reviews-left">
+            <div class="section-header">
+              <div class="section-badge">Depoimentos</div>
+              <h2 class="section-title">
+                Quem Conhece,<br /><strong
+                  ><span class="highlight">Ama</span></strong
+                >
+                o Nosso Trabalho,<br /><strong
+                  ><span class="highlight">Indica e Confia</span></strong
+                >
+              </h2>
             </div>
-        </section>
-
-
-        <!-- ======================================================= -->
-        <!-- ================== CTA SECTION ======================== -->
-        <!-- ======================================================= -->
-
-
-
-
-        <section class="cta-section" id="contato">
-            <canvas class="particles-canvas"></canvas>
-            <div class="container">
-                <div class="cta-wrapper">
-                    <div class="cta-left">
-                        <div class="section-badge">Vamos Conversar</div>
-                        <h2 class="cta-title">Pronto para Levar seu <br> Negócio ao <span
-                                style="color:#aeff2b;      text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);">Próximo
-                                Nível</span>?</h2>
+          </div>
+          <div class="reviews-right">
+            <div class="swiper reviews-swiper">
+              <div class="swiper-wrapper">
+                <!-- Review 2 -->
+                <div class="swiper-slide">
+                  <div class="review-card">
+                    <div class="review-header">
+                      <div class="review-avatar">
+                        <img
+                          src="./assets/images/pessoa-1.png"
+                          alt="Foto Revisor"
+                        />
+                      </div>
+                      <div class="review-stars">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                      </div>
                     </div>
-                    <div class="cta-right">
-                        <div class="cta-button-container">
-                            <!-- Spinning Text SVG -->
-                            <svg class="spinning-text" viewBox="0 0 200 200">
-                                <defs>
-                                    <path id="circlePath"
-                                        d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
-                                </defs>
-                                <text>
-                                    <textPath href="#circlePath" startOffset="0%" textLength="471"
-                                        lengthAdjust="spacing">LET'S TALK — VAMOS CONVERSAR — FALE CONOSCO —&nbsp;
-                                    </textPath>
-                                </text>
-                            </svg>
-                            <!-- Round Button -->
-                            <a href="./contato/index.html" class="cta-button-round" aria-label="Falar conosco">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                                    <polyline points="7 7 17 7 17 17"></polyline>
-                                </svg>
-                            </a>
-                        </div>
+                    <p class="review-text">
+                      Obrigada por estarem fazendo um bom trabalho, a gente está
+                      muito feliz, tem muita gente ligando e procurando a gente
+                      pelos advertising, isso é muito positivo, sinal que está
+                      funcionando bem, então quero agradecer. Muito sucesso!
+                    </p>
+                    <div class="review-author">
+                      <strong>Esmeralda Angelita</strong>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </section>
 
+                <!-- Review 3 -->
+                <div class="swiper-slide">
+                  <div class="review-card">
+                    <div class="review-header">
+                      <div class="review-avatar">
+                        <img
+                          src="./assets/images/pessoa-2.png"
+                          alt="Foto Revisor"
+                        />
+                      </div>
+                      <div class="review-stars">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="review-text">
+                      Profissionais atenciosos e ágeis. O layout do novo site
+                      ficou moderno, muito mais rápido e focado em converter
+                      leads. Estamos super felizes com o resultado.
+                    </p>
+                    <div class="review-author">
+                      <strong>Carlos Sales</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="swiper-slide">
+                  <div class="review-card">
+                    <div class="review-header">
+                      <div class="review-avatar">
+                        <img
+                          src="./assets/images/pessoa-3.png"
+                          alt="Foto Revisor"
+                        />
+                      </div>
+                      <div class="review-stars">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                          ></polygon>
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="review-text">
+                      Entregaram muito mais do que esperávamos. Além do site
+                      bonito, nos ajudaram com o desempenho e na otimização de
+                      conversão. Equipe simplesmente fantástica!
+                    </p>
+                    <div class="review-author">
+                      <strong>Rita Albuquerque</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews-nav">
+                <button class="reviews-btn-prev" aria-label="Anterior">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="reviews-btn-next" aria-label="Próximo">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="9 6 15 12 9 18"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================= -->
+      <!-- ================== CTA SECTION ======================== -->
+      <!-- ======================================================= -->
+
+      <section class="cta-section" id="contato">
+        <canvas class="particles-canvas"></canvas>
+        <div class="container">
+          <div class="cta-wrapper">
+            <div class="cta-left">
+              <div class="section-badge">Vamos Conversar</div>
+              <h2 class="cta-title">
+                Pronto para Levar seu <br />
+                Negócio ao
+                <span
+                  style="
+                    color: #aeff2b;
+                    text-shadow:
+                      0 2px 3px rgba(0, 0, 0, 0.5),
+                      0 1px 2px rgba(0, 0, 0, 0.3);
+                  "
+                  >Próximo Nível</span
+                >?
+              </h2>
+            </div>
+            <div class="cta-right">
+              <div class="cta-button-container">
+                <!-- Spinning Text SVG -->
+                <svg class="spinning-text" viewBox="0 0 200 200">
+                  <defs>
+                    <path
+                      id="circlePath"
+                      d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                    />
+                  </defs>
+                  <text>
+                    <textPath
+                      href="#circlePath"
+                      startOffset="0%"
+                      textLength="471"
+                      lengthAdjust="spacing"
+                    >
+                      LET'S TALK — VAMOS CONVERSAR — FALE CONOSCO —&nbsp;
+                    </textPath>
+                  </text>
+                </svg>
+                <!-- Round Button -->
+                <a
+                  href="./contato/index.html"
+                  class="cta-button-round"
+                  aria-label="Falar conosco"
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ======================================================= -->
     <!-- ================== FOOTER ============================ -->
     <!-- ======================================================= -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col footer-col-info">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <img src="./assets/images/logo.webp" alt="Logo" id="footer-logo-img">
-                        </div>
-                    </div>
-                    <p class="footer-description">
-                        Transformando ideias em experiências digitais excepcionais.
-                        Criamos websites que fazem a diferença.
-                    </p>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                viewBox="0 0 24 24"><!-- Icon from Google Material Icons by Material Design Authors - https://github.com/material-icons/material-icons/blob/master/LICENSE -->
-                                <path fill="currentColor"
-                                    d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28" />
-                            </svg>
-                            <span>+55 (41) 99999-9999</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                </path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <span>lynq2digital@gmail.com</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <span>Curitiba, PR</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <span>Seg - Sex: 09h às 18h</span>
-                        </li>
-                    </ul>
-                    <div class="footer-socials">
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                </path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#hero">Início</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#portfolio">Portfólio</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="#services">Websites</a></li>
-                        <li><a href="#services">E-commerce</a></li>
-                        <li><a href="#services">Landing Pages</a></li>
-                        <li><a href="#services">Aplicações Web</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li>+55 (41) 99999-9999</li>
-                        <li>lynq2digital@gmail.com</li>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col footer-col-info">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <img
+                  src="./assets/images/logo.webp"
+                  alt="Logo"
+                  id="footer-logo-img"
+                />
+              </div>
+            </div>
+            <p class="footer-description">
+              Transformando ideias em experiências digitais excepcionais.
+              Criamos websites que fazem a diferença.
+            </p>
+            <ul class="footer-contact-list">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                >
+                  <!-- Icon from Google Material Icons by Material Design Authors - https://github.com/material-icons/material-icons/blob/master/LICENSE -->
+                  <path
+                    fill="currentColor"
+                    d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"
+                  />
+                </svg>
+                <span>+55 (41) 99999-9999</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>lynq2digital@gmail.com</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Curitiba, PR</span>
+              </li>
+              <li>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Seg - Sex: 09h às 18h</span>
+              </li>
+            </ul>
+            <div class="footer-socials">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="#hero">Início</a></li>
+              <li><a href="#services">Serviços</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li><a href="#services">Websites</a></li>
+              <li><a href="#services">E-commerce</a></li>
+              <li><a href="#services">Landing Pages</a></li>
+              <li><a href="#services">Aplicações Web</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul>
+              <li>+55 (41) 99999-9999</li>
+              <li>lynq2digital@gmail.com</li>
 
-                        <li>Curitiba, PR</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>2026 &copy; Lynq2 Digital. Todos os direitos reservados.</p>
-            </div>
+              <li>Curitiba, PR</li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>2026 &copy; Lynq2 Digital. Todos os direitos reservados.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Custom Cursor (Portfolio) -->
     <div id="custom-cursor">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#050505" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <line x1="7" y1="17" x2="17" y2="7"></line>
-            <polyline points="7 7 17 7 17 17"></polyline>
-        </svg>
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#050505"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="7" y1="17" x2="17" y2="7"></line>
+        <polyline points="7 7 17 7 17 17"></polyline>
+      </svg>
     </div>
 
     <!-- Global Cursor (GSAP Dot + Trail) -->
@@ -995,18 +1520,35 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Botão Voltar ao Topo -->
-    <button class="scroll-to-top" id="scroll-to-top" aria-label="Voltar ao topo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M18 15l-6-6-6 6" />
-        </svg>
+    <button
+      class="scroll-to-top"
+      id="scroll-to-top"
+      aria-label="Voltar ao topo"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
     </button>
 
     <!-- Botão WhatsApp -->
-    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-button" aria-label="Fale conosco no WhatsApp">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-        </svg>
+    <a
+      href="https://wa.me/5511999999999"
+      target="_blank"
+      class="whatsapp-button"
+      aria-label="Fale conosco no WhatsApp"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        />
+      </svg>
     </a>
 
     <!-- GSAP -->
@@ -1014,6 +1556,5 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/particles.js"></script>
     <script src="./assets/js/particles-sections.js"></script>
-</body>
-
+  </body>
 </html>

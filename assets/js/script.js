@@ -10,10 +10,18 @@ class WebsiteController {
         this.ultimoScroll = 0;
         this.scrollDirection = 'up';
 
-        // Use the hero section's real height so the header hides
-        // right after the hero ends (works for short inner-page heroes too)
+        // Use ResizeObserver instead of immediate offsetHeight for better performance
         const heroEl = document.getElementById('hero');
         this.showAfterPx = heroEl ? heroEl.offsetHeight : 600;
+        
+        if (heroEl && window.ResizeObserver) {
+            new ResizeObserver(entries => {
+                for (let entry of entries) {
+                    this.showAfterPx = entry.contentRect.height;
+                }
+            }).observe(heroEl);
+        }
+        
         this.barraTopVisible = '8px';
         this.barraTopHidden = '-120px';
 
@@ -518,8 +526,8 @@ class WebsiteController {
         const updateAnimation = () => {
             const firstItem = content.querySelector('.category-strip-item');
             if (!firstItem) return;
-            void firstItem.offsetWidth;
-            const itemWidth = firstItem.offsetWidth;
+            // Removed layout thrashing reflow (void offsetWidth)
+            const itemWidth = firstItem.getBoundingClientRect().width;
             if (itemWidth > 0) {
                 content.style.width = `${itemWidth * 2}px`;
             }

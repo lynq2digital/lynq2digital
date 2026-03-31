@@ -56,14 +56,17 @@ class Particle {
 
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 20000;
-    for (let i = 0; i < numberOfParticles * 2; i++) {
-        let size = (Math.random() * 1.5) + 1; // Tamanho
+    // Cap the number of particles to ensure high performance on large screens
+    let baseAmount = (canvas.height * canvas.width) / 25000;
+    let numberOfParticles = Math.min(baseAmount, 120); 
+    
+    for (let i = 0; i < numberOfParticles; i++) {
+        let size = (Math.random() * 1.5) + 1;
         let x = Math.random() * (canvas.width - size * 1) + size;
         let y = Math.random() * (canvas.height - size * 1) + size;
-        let directionX = (Math.random() * 1) - 0.9; // velocidade 
-        let directionY = (Math.random() * 1) - 0.9;
-        let color = '#888888'; // cinza claro
+        let directionX = (Math.random() * 1) - 0.5;
+        let directionY = (Math.random() * 1) - 0.5;
+        let color = '#888888';
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
     }
 }

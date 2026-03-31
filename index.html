@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Lynk2 Digital - Desenvolvimento web profissional. Criamos websites modernos, rápidos e otimizados para converter visitantes em clientes. Especialistas em UI/UX e full-stack."
+      content="Lynq2 Digital - Desenvolvimento web profissional. Criamos websites modernos, rápidos e otimizados para converter visitantes em clientes. Especialistas em UI/UX e full-stack."
     />
 
     <title>Lynq2 Digital</title>
@@ -816,19 +816,20 @@ body {
 /* ================== HERO SECTION ======================= */
 /* ======================================================= */
 .hero {
-  min-height: 100vh;
+  height: 780px;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Mobile default */
-  padding: 100px 0 80px;
+   padding: 80px 0;
   position: relative;
   overflow: hidden;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 780px) {
   .hero {
+    height: 100dvh;
     justify-content: center;
-    padding: 70px 0 80px;
+    padding: 80px 0;
   }
 }
 
@@ -1193,10 +1194,942 @@ body {
 
 .light-theme .btn-secondary {
   border-color: var(--border-color);
+}/* ======================================================= */
+/* ================== SERVICES SECTION =================== */
+/* ======================================================= */
+.services-section {
+  padding: 100px 0;
+  overflow: hidden;
+  position: relative;
 }
 
+.services-swiper {
+  overflow: visible !important;
+  padding-bottom: 10px;
+}
+
+.services-swiper .swiper-slide {
+  height: auto;
+}
+
+.services-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .services-nav {
+    justify-content: flex-start;
+  }
+}
+
+.services-btn-prev,
+.services-btn-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.services-btn-prev:hover,
+.services-btn-next:hover {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+  color: #050505;
+}
+
+.services-btn-prev:hover svg,
+.services-btn-next:hover svg {
+  stroke: #050505;
+}
+
+/* Disabled state — Swiper adds this class automatically at boundaries */
+.services-btn-prev.swiper-button-disabled,
+.services-btn-next.swiper-button-disabled {
+  opacity: 0;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.service-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 20px;
+
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  height: 100%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 336px) {
+  .service-card {
+    padding: 28px;
+  }
+}
+@media (min-width: 400px) {
+  .service-card {
+    padding: 32px;
+  }
+}
+@media (min-width: 780px) {
+  .service-card {
+    padding: 40px;
+  }
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 64px;
+  background: var(--accent-green);
+  border-radius: 0 4px 4px 0;
+  transition: height 0.3s ease;
+}
+
+.service-card:hover::before {
+  height: 240px;
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  transition: all 0.3s;
+}
+
+.service-card:hover .service-icon {
+  background: var(--accent-green);
+  color: #050505;
+  /* Preto text on green is fine in both themes */
+  border-color: var(--accent-green);
+}
+
+.service-card .btn-primary {
+  margin-top: auto;
+  max-width: 240px;
+}
+
+.service-title {
+  font-size: 21px;
+}
+
+.service-description {
+  font-family: var(--font-desc);
+  font-size: 17px;
+}
+
+/* ======================================================= */
+/* ================== SOBRE SECTION ====================== */
+/* ======================================================= */
+.sobre-section {
+  padding: 100px 0;
+  background-color: var(--bg-secondary);
+}
+
+.sobre-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: stretch;
+}
+
+@media (min-width: 901px) {
+  .sobre-content {
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+  }
+}
+
+.sobre-left {
+  width: 100%;
+}
+
+@media (min-width: 901px) {
+  .sobre-left {
+    flex: 1.2;
+  }
+}
+
+.sobre-description {
+  font-family: var(--font-desc);
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.sobre-features {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-weight: 700;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  color: var(--text-primary);
+}
+
+.feature-item p {
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.feature-item strong {
+  color: var(--text-primary);
+}
+
+.sobre-cta {
+  margin-top: 32px;
+}
+
+.sobre-right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 901px) {
+  .sobre-right {
+    flex: 0.8;
+  }
+}
+
+.sobre-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+@media (min-width: 601px) {
+  .sobre-stats {
+    gap: 40px;
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent-green);
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.3),
+    0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.stat-label {
+  font-size: 15px;
+  color: var(--text-secondary);
+
+  text-align: center;
+}
+
+.sobre-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 28px;
+}
+
+.sobre-image img {
+  width: 460px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
+/* ======================================================= */
+/* ================== PORTFOLIO SECTION ================== */
+/* ======================================================= */
+
+:root {
+  --cards: 3;
+  --cardHeight: 420px;
+  --cardTopPadding: 20px;
+  --cardMargin: 4vw;
+}
+
+.portfolio-section {
+  position: relative;
+  padding: 80px 0;
+  /* SEM overflow: hidden — mata o sticky! */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- GRID MOBILE: stacking --- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: 2;
+  padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+  margin-bottom: var(--cardMargin);
+}
+
+/* índice de cada card */
+#card1 {
+  --index: 1;
+}
+
+#card2 {
+  --index: 2;
+}
+
+#card3 {
+  --index: 3;
+}
+
+/* Wrapper transparente — o sticky é AQUI */
+.portfolio-card-wrapper {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+.portfolio-item {
+  position: relative;
+  height: var(--cardHeight);
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+}
+
+.portfolio-image {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+/* Images by Theme */
+#card1 .portfolio-image {
+  background-image: url("./assets/images/project-1-dark.webp");
+}
+
+:root.light-theme #card1 .portfolio-image {
+  background-image: url("./assets/images/project-1.webp");
+}
+
+/* Images by Theme */
+#card2 .portfolio-image {
+  background-image: url("./assets/images/project-2-dark.webp");
+}
+
+:root.light-theme #card2 .portfolio-image {
+  background-image: url("./assets/images/project-2.webp");
+}
+/* Images by Theme */
+#card3 .portfolio-image {
+  background-image: url("./assets/images/project-3-dark.webp");
+}
+
+:root.light-theme #card3 .portfolio-image {
+  background-image: url("./assets/images/project-3.webp");
+}
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.08);
+}
+
+.portfolio-link-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 4;
+  transition:
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease;
+}
+
+/* Mobile Center Alignment Only */
+@media (max-width: 768px) {
+  .portfolio-overlay {
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.portfolio-category,
+.portfolio-title,
+.portfolio-desc {
+  display: none;
+}
+
+.portfolio-category {
+  color: var(--accent-green);
+  font-size: 12px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0 10px;
+  color: #ffffff;
+}
+
+.portfolio-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-portfolio {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 6px 6px 6px 20px;
+  border-radius: 100px;
+
+  font-size: 14px;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.btn-portfolio span {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.btn-portfolio .arrow {
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.btn-portfolio .arrow svg path {
+  fill: #ffffff;
+  transition: fill 0.3s ease;
+}
+
+.btn-portfolio .arrow svg {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.btn-portfolio:hover .arrow svg {
+  transform: rotate(0deg);
+}
+
+/* --- DESKTOP: lado a lado --- */
+@media (min-width: 769px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: unset;
+    gap: 24px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .portfolio-card-wrapper {
+    position: relative;
+    /* cancela sticky no desktop */
+    padding-top: 0;
+  }
+
+  .portfolio-overlay {
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    background: rgba(46, 46, 46, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    padding: 24px 20px;
+    transform: translateY(110%);
+    opacity: 0;
+    display: block;
+    /* Garante layout original no desktop */
+    text-align: left;
+  }
+
+  .portfolio-category,
+  .portfolio-title,
+  .portfolio-desc {
+    display: block;
+  }
+
+  .portfolio-item:hover .portfolio-overlay {
+    transform: translateY(-16px);
+    opacity: 1;
+  }
+
+  .portfolio-section {
+    padding-bottom: 120px;
+  }
+}
+
+/* ======================================================= */
+/* ================== REVIEWS SECTION ==================== */
+/* ======================================================= */
+.reviews-section {
+  padding: 100px 0;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.reviews-split {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.reviews-left .section-header {
+  margin-bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-left .section-title {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .reviews-split {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .reviews-left {
+    width: 35%;
+    flex-shrink: 0;
+    padding-right: 40px;
+  }
+
+  .reviews-left .section-header {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .reviews-left .section-title {
+    text-align: left;
+  }
+
+  .reviews-right {
+    width: 65%;
+    min-width: 0;
+    overflow: hidden;
+  }
+}
+
+.reviews-swiper {
+  padding-bottom: 10px;
+}
+
+.reviews-swiper .swiper-slide {
+  height: auto;
+}
+
+.reviews-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .reviews-nav {
+    justify-content: flex-start;
+  }
+}
+
+.reviews-btn-prev,
+.reviews-btn-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.reviews-btn-prev:hover,
+.reviews-btn-next:hover {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+  color: #050505;
+}
+
+.reviews-btn-prev:hover svg,
+.reviews-btn-next:hover svg {
+  stroke: #050505;
+}
+
+/* Removed disabled state as the swiper now loops infinitely */
+
+.review-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.review-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-green);
+  color: #050505;
+  font-weight: 700;
+  font-family: var(--font-main);
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  font-family: var(--font-main);
+}
+
+:root.light-theme .review-avatar {
+  color: var(--text-primary);
+}
+
+.review-stars {
+  display: flex;
+  gap: 4px;
+  color: var(--accent-green);
+}
+
+:root.light-theme .review-stars {
+  display: flex;
+  gap: 4px;
+  color: var(--text-primary);
+}
+
+.review-text {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  flex-grow: 1;
+  font-family: var(--font-body);
+}
+
+.review-author {
+  font-size: 15px;
+  color: var(--text-primary);
+  margin-top: auto;
+}
+
+.review-author strong {
+  font-weight: 700;
+}
+
+/* ======================================================= */
+/* ==================== CTA SECTION ====================== */
+/* ======================================================= */
+.cta-section {
+  padding: 100px 0;
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta-wrapper {
+  background-color: var(--bg-secondary);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-title {
+  font-size: clamp(32px, 4vw, 46px);
+  margin-top: 16px;
+  line-height: 1.2;
+  font-family: var(--font-main);
+  font-weight: 700 !important;
+}
+
+.cta-title .highlight {
+  font-family: var(--font-main);
+  font-weight: 700 !important;
+  color: var(--accent-green);
+  text-shadow:
+    0 2px 3px rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.spinning-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 15s linear infinite;
+  pointer-events: none;
+}
+
+.spinning-text text {
+  fill: var(--text-primary);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-family: var(--font-body);
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cta-button-round {
+  width: 136px;
+  height: 136px;
+  background: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.cta-button-round svg {
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+.cta-button-round:hover svg {
+  transform: rotate(45deg) scale(1.1);
+}
+
+.hero-cta-button {
+  position: absolute;
+  bottom: 0px;
+  right: 8px;
+  z-index: 100;
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .hero-cta-button {
+    display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .cta-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 80px;
+    text-align: unset;
+  }
+
+  .cta-title {
+    line-height: 1.3;
+  }
+
+  .cta-left {
+    display: block;
+  }
+}
+
+/* ======================================================= */
+/* ================== CUSTOM CURSOR ====================== */
+/* ======================================================= */
+
+@media (min-width: 769px) {
+  /* Hide button and system cursor on hover */
+  .portfolio-item[data-cursor-hover="true"],
+  .portfolio-item[data-cursor-hover="true"] * {
+    cursor: none !important;
+  }
+
+  .portfolio-item[data-cursor-hover="true"] .btn-portfolio {
+    display: none !important;
+  }
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 64px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition:
+    transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    opacity 0.7s ease;
+}
+
+#custom-cursor svg {
+  /* Arrow size adjusted slightly larger */
+  width: 28px;
+  height: 28px;
+}
+
+#custom-cursor.active {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
+}
+
+/* Hide custom cursor completely on mobile/touch interfaces */
+@media (pointer: coarse), (hover: none) {
+  #custom-cursor {
+    display: none !important;
+  }
+}
+
+
     </style>
-    <link rel="stylesheet" href="./assets/css/home.css" />
+  
     <link rel="stylesheet" href="./assets/css/footer.css" />
 
   </head>
@@ -1210,7 +2143,13 @@ body {
         <div class="barra" id="barra">
           <div class="barra-topo">
             <a href="#hero" class="logo-icon">
-              <img src="./assets/images/logo.webp" id="nav-logo" alt="Logo" />
+              <img
+                src="./assets/images/logo.webp"
+                id="nav-logo"
+                alt="Logo"
+                width="120"
+                height="40"
+              />
             </a>
 
             <nav class="nav-desktop">
@@ -1659,7 +2598,7 @@ body {
                     Sites profissionais que fortalecem sua marca e comunicam
                     seus valores de forma clara e impactante.
                   </p>
-                  <a href="" class="btn-primary">
+                  <a href="#contato" class="btn-primary">
                     <span>Saiba Mais</span>
                     <div class="arrow">
                       <svg
@@ -1707,7 +2646,7 @@ body {
                     Páginas focadas em conversão, otimizadas para campanhas de
                     marketing e vendas.
                   </p>
-                  <a href="" class="btn-primary">
+                  <a href="#contato" class="btn-primary">
                     <span>Saiba Mais</span>
                     <div class="arrow">
                       <svg
@@ -1751,7 +2690,7 @@ body {
                     Aplicações web personalizadas para automatizar processos e
                     gerenciar seu negócio.
                   </p>
-                  <a href="" class="btn-primary">
+                  <a href="#contato" class="btn-primary">
                     <span>Saiba Mais</span>
                     <div class="arrow">
                       <svg
@@ -1794,7 +2733,7 @@ body {
                     Lojas virtuais completas e seguras para você vender seus
                     produtos online com alta performance.
                   </p>
-                  <a href="" class="btn-primary">
+                  <a href="#contato" class="btn-primary">
                     <span>Saiba Mais</span>
                     <div class="arrow">
                       <svg
@@ -1835,7 +2774,7 @@ body {
                     Suporte contínuo e manutenção preventiva para manter seu
                     site sempre atualizado e seguro.
                   </p>
-                  <a href="" class="btn-primary">
+                  <a href="#contato" class="btn-primary">
                     <span>Saiba Mais</span>
                     <div class="arrow">
                       <svg
@@ -2008,6 +2947,9 @@ body {
                 <img
                   src="./assets/images/about.webp"
                   alt="Performance e Resultados"
+                  width="600"
+                  height="400"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -2481,7 +3423,7 @@ body {
                 </svg>
                 <!-- Round Button -->
                 <a
-                  href="./contato/index.html"
+                  href="#contato"
                   class="cta-button-round"
                   aria-label="Falar conosco"
                 >
@@ -2519,6 +3461,9 @@ body {
                   src="./assets/images/logo.webp"
                   alt="Logo"
                   id="footer-logo-img"
+                  width="120"
+                  height="40"
+                  loading="lazy"
                 />
               </div>
             </a>
@@ -2707,7 +3652,7 @@ body {
     <div class="cursor-trail"></div>
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
     <!-- Botão Voltar ao Topo -->
     <button
@@ -2729,7 +3674,7 @@ body {
 
     <!-- Botão WhatsApp -->
     <a
-      href="https://wa.me/5511999999999"
+      href="https://wa.me/5541999999999"
       target="_blank"
       class="whatsapp-button"
       aria-label="Fale conosco no WhatsApp"
@@ -2739,13 +3684,7 @@ body {
           d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
         />
     <!-- Custom Cursor Setup -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-trail"></div>
-    <div id="custom-cursor">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M7 17L17 7M17 7H7M17 7V17" />
-      </svg>
-    </div>
+
 
     <script src="./assets/js/swiper-bundle.min.js" defer></script>
     <script

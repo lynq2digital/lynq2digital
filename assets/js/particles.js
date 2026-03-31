@@ -56,16 +56,17 @@ class Particle {
 
 function init() {
     particlesArray = [];
-    // Cap the number of particles to ensure high performance on large screens
-    let baseAmount = (canvas.height * canvas.width) / 25000;
-    let numberOfParticles = Math.min(baseAmount, 120); 
+    // Increased particle cap to 240 for a richer, more active feel
+    let baseAmount = (canvas.height * canvas.width) / 10000;
+    let numberOfParticles = Math.min(baseAmount, 240); 
     
     for (let i = 0; i < numberOfParticles; i++) {
         let size = (Math.random() * 1.5) + 1;
         let x = Math.random() * (canvas.width - size * 1) + size;
         let y = Math.random() * (canvas.height - size * 1) + size;
-        let directionX = (Math.random() * 1) - 0.5;
-        let directionY = (Math.random() * 1) - 0.5;
+        // Increased velocity for a more dynamic effect
+        let directionX = (Math.random() * 1.5) - 0.75;
+        let directionY = (Math.random() * 1.5) - 0.75;
         let color = '#888888';
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
     }

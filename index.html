@@ -1695,7 +1695,22 @@ body {
 .btn-portfolio:hover .arrow svg {
   transform: rotate(0deg);
 }
+:root.light-theme .btn-portfolio {
+  border: 1px solid rgba(35, 35, 35, 0.2);
+  color: #232323;
+}
 
+:root.light-theme .btn-portfolio span {
+  color: #232323;
+}
+
+:root.light-theme .btn-portfolio .arrow {
+  border: 1px solid #232323;
+}
+
+:root.light-theme .btn-portfolio .arrow svg path {
+  fill: #232323;
+}
 /* --- DESKTOP: lado a lado --- */
 @media (min-width: 769px) {
   .portfolio-grid {

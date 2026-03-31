@@ -137,7 +137,7 @@ class WebsiteController {
     bindMenuToggle() {
         if (!this.menuBtn) return;
         this.menuBtn.addEventListener('click', () => {
-            if (window.innerWidth >= 1080) return;
+            if (window.innerWidth >= 1180) return;
             this.barra.classList.toggle('expansivel');
             this.menuBtn.classList.toggle('open');
             if (window.scrollY > 10 && !this.barra.classList.contains('expansivel')) {
@@ -217,7 +217,7 @@ class WebsiteController {
 
                     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
 
-                    if (window.innerWidth < 1080) {
+                    if (window.innerWidth < 1180) {
                         const barra = document.getElementById('barra');
                         const menuBtn = document.getElementById('menu-btn');
                         if (barra && menuBtn) {
@@ -240,7 +240,7 @@ class WebsiteController {
     }
 
     handleResize() {
-        if (window.innerWidth >= 1080) {
+        if (window.innerWidth >= 1180) {
             this.barra.classList.remove('expansivel');
             if (this.menuBtn) this.menuBtn.classList.remove('open');
             this.barraContainer.style.top = this.barraTopVisible;
@@ -335,6 +335,7 @@ class WebsiteController {
                 slidesPerView: 1.1,
                 centeredSlides: true,
                 spaceBetween: 20,
+                speed: 800,
                 grabCursor: true,
                 navigation: {
                     nextEl: '.services-btn-next',

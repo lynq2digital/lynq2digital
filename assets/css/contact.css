@@ -36,14 +36,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-:root.light-theme .contact-icon {
-    background: var(--accent-green);
-    color: var(--text-secondary)
+    border: 1px solid var(--border-color);
 }
 
 .contact-description {
+    font-family: var(--font-desc);
     color: var(--text-secondary);
     font-size: 18px;
     line-height: 1.8;
@@ -51,7 +48,7 @@
 }
 
 .contact-form {
-    background: var(--bg-card);
+    background: var(--bg-secondary);
     padding: 40px;
     border-radius: 36px;
     border: 1px solid var(--border-color);
@@ -87,7 +84,7 @@
     padding: 16px;
     border-radius: 20px;
     color: var(--text-primary);
-    font-family: inherit;
+    font-family: var(--font-body);
 }
 
 .form-group input:focus,

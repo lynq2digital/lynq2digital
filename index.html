@@ -12,24 +12,1193 @@
 
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="./favicon.png" />
+   
+    <!-- Fonts -->
+         <link
+      rel="preload"
+      href="./assets/fonts/SpaceGrotesk-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/Sora-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="./assets/css/main.css" />
+     <!-- Swiper CSS: local -->
+    <link
+      rel="stylesheet"
+      href="./assets/css/swiper-bundle.min.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    </noscript>
+
+    <!-- CSS -->
+    <style>
+       /*================================  */
+      /* ====== LOCAL FONTS ============ */
+      /*================================  */
+      @font-face {
+        font-family: "Space Grotesk";
+        src: url("./assets/fonts/SpaceGrotesk-Bold.woff2") format("woff2");
+        font-weight: 700;
+        font-display: swap;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Sora";
+        src: url("./assets/fonts/Sora-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+      }
+      /* ======================================================= */
+/* ===================== RESET E BASE ==================== */
+/* ======================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Dark Theme (default) ===== */
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #131313;
+  --text-primary: #ffffff;
+  --text-secondary: #aeaeae;
+  --accent-green: #aeff2b;
+  --border-color: #1a1a1a;
+  --header-bg: rgba(11, 11, 11, 0.75);
+
+  /* ===== Typography ===== */
+  --font-main: "Space Grotesk", sans-serif;
+  --font-alter: "Sora", sans-serif;
+  --font-body: sans-serif;
+}
+
+:root.light-theme {
+  --bg-primary: #fcfcfc;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #232323;
+  --text-secondary: #555555;
+  --border-color: #e0e0e0;
+  --header-bg: rgba(252, 252, 252, 0.75);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-main);
+  font-weight: 700 !important;
+  color: var(--text-primary);
+}
+
+a,
+li,
+span,
+button,
+label,
+input,
+strong,
+textarea {
+  font-family: var(--font-alter);
+  font-weight: 400 !important;
+  color: var(--text-primary);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-weight: 400 !important;
+  font-size: inherit;
+  line-height: inherit;
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ======================================================= */
+/* ==================== SCROLL BAR ======================= */
+/* ======================================================= */
+
+/* Barra de rolagem - largura */
+::-webkit-scrollbar {
+  width: 10px;
+  z-index: 3;
+}
+
+/* Fundo da barra (trilho) */
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+/* Parte que se move (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-green);
+  border-radius: 8px;
+  /* Cor laranja */
+
+  border: 1px solid var(--background);
+  /* Borda entre thumb e track */
+}
+
+/* ==== Body ==== */
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  user-select: none;
+  cursor: none;
+}
+
+/* ================== CUSTOM CURSOR ====================== */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10001;
+  opacity: 0; /* JS will show on move */
+}
+
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent-green);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0; /* JS will show on move */
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.cursor-trail.hovered {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(174, 255, 43, 0.15);
+}
+
+@media (max-width: 1024px) {
+  body {
+    cursor: auto !important;
+  }
+  .cursor-dot,
+  .cursor-trail,
+  #custom-cursor {
+    display: none !important;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 8px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+.btn-primary {
+  background: var(--accent-green);
+  color: #000000;
+  padding: 6px 5px 6px 24px;
+  border-radius: 100px;
+
+  transition: all 0.3s;
+  display: inline-flex;
+  justify-content: flex-end;
+  /* Keeps arrow to the right if span doesn't fill it */
+  align-items: center;
+  gap: 16px;
+  height: auto;
+}
+
+.btn-primary span {
+  margin: 0;
+  color: #000;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.arrow {
+  background-color: #000;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow svg {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.btn-primary:hover .arrow svg {
+  transform: rotate(0deg);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0 32px;
+  /* Remove vertical padding, rely on height/flex for centering */
+  border-radius: 100px;
+  height: 48px;
+  /* Fixed height to match the primary button if needed */
+
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  /* Fixed typo from align-itens */
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .btn-secondary {
+    /* Reset if necessary on desktop, but let's keep it consistent */
+    height: 52px;
+  }
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+/* ======================================================= */
+/* ================== HEADER SECTION ===================== */
+/* ======================================================= */
+
+.header {
+  position: fixed;
+  top: 8px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none;
+  transition: top 0.4s ease;
+}
+
+.header .container {
+  pointer-events: auto;
+}
+
+.barra {
+  background: var(--header-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 70px;
+  border-radius: 40px;
+  transition:
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.4s ease;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  will-change: width, height;
+}
+
+.barra.compacta {
+  width: 80%;
+  transition:
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.4s ease;
+}
+
+.barra.expansivel {
+  height: 480px;
+  width: 100%;
+  transition:
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.4s ease;
+}
+
+.barra-topo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  height: 70px;
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.logo-icon {
+  border-radius: 100px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green);
+
+  font-size: 20px;
+}
+
+.logo-icon img {
+  width: 80px;
+
+  object-fit: cover;
+}
+
+:root.light-theme .logo-icon {
+  color: var(--text-primary);
+}
+
+.logo-code {
+  background: var(--accent-green);
+  color: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media (min-width: 1181px) {
+  .barra-topo {
+    gap: 32px;
+  }
+
+  .logo {
+    flex-shrink: 1;
+  }
+
+  .logo-text {
+    display: block;
+  }
+}
+
+.nav-desktop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.nav-desktop ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-desktop ul li a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 15px;
+
+  transition: color 0.3s;
+}
+
+.nav-desktop ul li a:hover {
+  color: var(--accent-green);
+}
+
+.nav-item-flex {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-badge {
+  font-family: var(--font-alter);
+  font-weight: 400 !important;
+  background-color: var(--accent-green);
+  color: #000;
+  font-size: 10px;
+
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  line-height: 1;
+  position: relative;
+  top: -8px;
+}
+
+.nav-mobile-list .nav-badge {
+  top: -14px;
+}
+
+@media (min-width: 1180px) {
+  .nav-desktop {
+    display: flex;
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.header-actions .btn-primary {
+  display: none;
+}
+
+@media (min-width: 1181px) {
+  .header-actions {
+    margin-left: 0;
+    gap: 16px;
+  }
+
+  .header-actions .btn-primary {
+    display: inline-flex;
+  }
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-btn span {
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+@media (min-width: 1181px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Nav Mobile */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 16px 28px 28px;
+  gap: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  flex-grow: 1;
+  /* allow taking remaining height to push items to the bottom */
+}
+
+.barra.expansivel .nav-mobile {
+  display: flex;
+  opacity: 1;
+}
+
+/* Nav Mobile Items Animation */
+.nav-mobile-list li,
+.nav-mobile-btn {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.barra.expansivel .nav-mobile-list li {
+  animation: fadeSlideRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.barra.expansivel .nav-mobile-btn {
+  animation: fadeSlideRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Staggered delays for a cascade effect */
+.barra.expansivel .nav-mobile-list li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.barra.expansivel .nav-mobile-list li:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.barra.expansivel .nav-mobile-list li:nth-child(3) {
+  animation-delay: 0.26s;
+}
+
+.barra.expansivel .nav-mobile-list li:nth-child(4) {
+  animation-delay: 0.34s;
+}
+
+.barra.expansivel .nav-mobile-list li:nth-child(5) {
+  animation-delay: 0.42s;
+}
+
+.barra.expansivel .nav-mobile-btn {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeSlideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-mobile-list li a {
+  display: block;
+  padding: 12px 16px;
+  font-size: 18px;
+
+  transition: all 0.3s;
+}
+
+.nav-mobile-list li a:hover {
+  background: rgba(57, 255, 20, 0.1);
+  color: var(--accent-green);
+}
+
+.nav-mobile-btn {
+  width: 100%;
+  text-align: center;
+  padding: 14px 24px;
+  font-size: 18px;
+}
+
+@media (min-width: 1180px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+
+/* Theme Toggle & Scroll Top */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 8px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+/* Dark mode (default): show sun, hide moon */
+.sun-icon {
+  display: block;
+}
+
+.moon-icon {
+  display: none;
+}
+
+/* Light mode: show moon, hide sun */
+.light-theme .sun-icon {
+  display: none;
+}
+
+.light-theme .moon-icon {
+  display: block;
+}
+
+/* Mobile First — botões colados no canto */
+.scroll-to-top {
+  position: fixed;
+  bottom: 96px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--accent-green);
+  color: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translateX(100px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 990;
+}
+
+:root.light-theme .scroll-to-top {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #c7c7c7;
+  color: #656565;
+}
+
+.scroll-to-top.visible {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 32px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s ease;
+  z-index: 990;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100px);
+}
+
+.whatsapp-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.whatsapp-button.visible:hover {
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
+}
+
+/* Tablet e acima — tamanho e posição originais */
+@media (min-width: 768px) {
+  .scroll-to-top {
+    bottom: 110px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .whatsapp-button {
+    bottom: 40px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .theme-toggle:hover {
+    color: var(--accent-green);
+  }
+}
+
+/* ======================================================= */
+/* ================= SECTION HEADER (SHARED) ============= */
+/* ======================================================= */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  font-family: var(--font-alter);
+  font-weight: 400 !important;
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--accent-green);
+  border-radius: 100px;
+  color: #232323;
+  font-size: 14px;
+
+  margin-bottom: 24px;
+}
+.hero .section-badge {
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: 32px;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.highlight-main {
+  font-family: var(--font-main);
+  font-weight: 700 !important;
+  color: var(--accent-green);
+  text-shadow:
+    0 3px 5px rgba(0, 0, 0, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.section-title .highlight {
+  font-family: var(--font-main);
+  font-weight: 700 !important;
+  color: var(--accent-green);
+  text-shadow:
+    0 2px 3px rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 40px;
+    line-height: 1.4;
+  }
+}
+
+/* ======================================================= */
+/* ================== HERO SECTION ======================= */
+/* ======================================================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Mobile default */
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    justify-content: center;
+    padding: 70px 0 80px;
+  }
+}
+
+#canvas1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: clamp(44px, 5vw, 64px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-title .highlight {
+  font-family: var(--font-main);
+  color: var(--accent-green);
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.3),
+    0 0 2px rgba(0, 0, 0, 0.2);
+}
+.hero-description {
+  padding-right: 20px;
+}
+.hero-description,
+.section-description {
+  font-family: var(--font-alter);
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.hero-description {
+  margin: 24px 0;
+  text-align: left;
+}
+
+.section-description {
+  margin: 24px auto;
+  text-align: center;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  width: 100%;
+  text-align: left;
+}
+
+.hero-buttons .btn-primary {
+  justify-content: space-between;
+}
+
+.hero-buttons .btn-secondary {
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--accent-green);
+  color: #000000;
+  padding: 6px 5px 6px 24px;
+  border-radius: 100px;
+
+  transition: all 0.3s;
+  display: inline-flex;
+  justify-content: flex-end;
+  /* Keeps arrow to the right if span doesn't fill it */
+  align-items: center;
+  gap: 16px;
+  height: auto;
+}
+
+.btn-primary span {
+  margin: 0;
+  color: #000;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.arrow {
+  background-color: #000;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow svg {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.btn-primary:hover .arrow svg {
+  transform: rotate(0deg);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0 32px;
+  /* Remove vertical padding, rely on height/flex for centering */
+  border-radius: 100px;
+  height: 48px;
+  /* Fixed height to match the primary button if needed */
+
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  /* Fixed typo from align-itens */
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .btn-secondary {
+    /* Reset if necessary on desktop, but let's keep it consistent */
+    height: 52px;
+  }
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+@media (min-width: 481px) {
+  .hero {
+    padding-top: 160px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero {
+    justify-content: flex-start;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-description {
+    margin: 32px 0;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: auto;
+  }
+}
+
+/* ======================================================= */
+/* ================= HERO BREADCRUMB ===================== */
+/* ======================================================= */
+.hero-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+@media (min-width: 769px) {
+  .hero-breadcrumb {
+    justify-content: flex-start;
+  }
+}
+
+.hero-breadcrumb a {
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.hero-breadcrumb a:hover {
+  color: var(--accent-green);
+}
+
+.hero-breadcrumb .separator {
+  opacity: 0.4;
+}
+
+.hero-breadcrumb .current {
+  color: var(--text-primary);
+}
+
+/* ======================================================= */
+/* ================== CATEGORY STRIP ===================== */
+/* ======================================================= */
+.category-strip {
+  background: var(--accent-green);
+
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  line-height: 1;
+  display: flex;
+}
+
+.category-strip-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  animation: scroll 120s linear infinite;
+  animation-play-state: running;
+}
+
+.category-strip:hover .category-strip-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.category-strip-content span {
+  font-family: var(--font-main);
+  font-weight: 700 !important;
+  color: #000000;
+  font-size: 18px;
+
+  white-space: nowrap;
+  display: inline;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.category-strip-content .separator {
+  color: rgba(0, 0, 0, 0.7);
+
+  font-size: 20px;
+  line-height: 1;
+  display: inline;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (min-width: 769px) {
+  .category-strip-content span {
+    font-size: 20px;
+  }
+
+  .category-strip-content .separator {
+    font-size: 26px;
+    margin: 0 15px;
+  }
+}
+
+/* ======================================================= */
+/* ================= GLOBAL GSAP CURSOR ================== */
+/* ======================================================= */
+.cursor-dot,
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Hidden initially until mouse moves */
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-green);
+  z-index: 9999;
+}
+
+.cursor-trail {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(174, 255, 43, 0.1);
+  border: 1px solid rgba(165, 216, 83, 0.1);
+  transition:
+    width 0.3s,
+    height 0.3s,
+    background-color 0.3s;
+}
+
+/* Optional expansion state for links and buttons */
+.cursor-trail.hovered {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(174, 255, 43, 0.2);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot,
+  .cursor-trail {
+    display: none !important;
+  }
+}
+
+/* ======================================================= */
+/* ==================== LIGHT THEME ====================== */
+/* ======================================================= */
+
+/* Adjust specific elements for light theme */
+.light-theme .barra {
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .service-card,
+.light-theme .faq-item,
+.light-theme .blog-card,
+.light-theme .contact-form {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .btn-secondary {
+  border-color: var(--border-color);
+}
+
+    </style>
     <link rel="stylesheet" href="./assets/css/home.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
 
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <!-- Font Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
@@ -40,9 +1209,9 @@
       <div class="container">
         <div class="barra" id="barra">
           <div class="barra-topo">
-            <div class="logo-icon">
-              <img src="./assets/images/logo.webp" id="nav-logo" />
-            </div>
+            <a href="#hero" class="logo-icon">
+              <img src="./assets/images/logo.webp" id="nav-logo" alt="Logo" />
+            </a>
 
             <nav class="nav-desktop">
               <ul>
@@ -168,6 +1337,7 @@
         <canvas id="canvas1"></canvas>
         <div class="container">
           <div class="hero-content">
+            <div class="section-badge">Soluções Digitais para o seu Negócio</div>
             <h1 class="hero-title">
               Transforme sua Visão em <br />
               <span class="highlight-main">Realidade Digital</span>
@@ -197,7 +1367,44 @@
               <a href="#portfolio" class="btn-secondary">Ver Portfólio</a>
             </div>
           </div>
+
+              <div class="hero-cta-button">
+          <div class="cta-button-container">
+            <svg class="spinning-text" viewBox="0 0 200 200">
+              <defs>
+                <path
+                  id="heroCirclePath"
+                  d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                />
+              </defs>
+                <text>
+                  <textPath
+                    href="#heroCirclePath"
+                    startOffset="0%"
+                    textLength="471"
+                    lengthAdjust="spacing"
+                  >LET'S TALK — VAMOS CONVERSAR — FALE CONOSCO —&nbsp;</textPath>
+                </text>
+            </svg>
+            <a href="#contato" class="cta-button-round">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </a>
+          </div>
         </div>
+
+        </div>
+
+     
+    
       </section>
 
       <!-- ======================================================= -->
@@ -799,7 +2006,7 @@
               </div>
               <div class="sobre-image">
                 <img
-                  src="./assets/images/about-2.webp"
+                  src="./assets/images/about.webp"
                   alt="Performance e Resultados"
                 />
               </div>
@@ -837,7 +2044,7 @@
                     <span class="portfolio-category">Website</span>
                     <h3 class="portfolio-title">Website Institucional</h3>
                     <p class="portfolio-desc">
-                      Website desenvolvido para empresa especializada em
+                      Website desenvolvido para empresa JENS Soluções, especializada em
                       manutenção elétrica e hidráulica em Curitiba.
                     </p>
                     <div class="btn-portfolio">
@@ -896,12 +2103,12 @@
               </div>
             </div>
 
-            <!-- Card 1 -->
+            <!-- Card 3 -->
             <div class="portfolio-card-wrapper" id="card3">
               <div class="portfolio-item" data-cursor-hover="true">
                 <a
-                  href="https://jenssolucoes.com.br"
-                  target="_blank"
+                  href="#hero"
+               
                   class="portfolio-link-wrapper"
                 >
                   <div class="portfolio-image"></div>
@@ -961,10 +2168,7 @@
                   <div class="review-card">
                     <div class="review-header">
                       <div class="review-avatar">
-                        <img
-                          src="./assets/images/pessoa-1.png"
-                          alt="Foto Revisor"
-                        />
+                        EA
                       </div>
                       <div class="review-stars">
                         <svg
@@ -1046,10 +2250,7 @@
                   <div class="review-card">
                     <div class="review-header">
                       <div class="review-avatar">
-                        <img
-                          src="./assets/images/pessoa-2.png"
-                          alt="Foto Revisor"
-                        />
+                        CS
                       </div>
                       <div class="review-stars">
                         <svg
@@ -1130,10 +2331,7 @@
                   <div class="review-card">
                     <div class="review-header">
                       <div class="review-avatar">
-                        <img
-                          src="./assets/images/pessoa-3.png"
-                          alt="Foto Revisor"
-                        />
+                        RA
                       </div>
                       <div class="review-stars">
                         <svg
@@ -1257,15 +2455,7 @@
               <h2 class="cta-title">
                 Pronto para Levar seu <br />
                 Negócio ao
-                <span
-                  style="
-                    color: #aeff2b;
-                    text-shadow:
-                      0 2px 3px rgba(0, 0, 0, 0.5),
-                      0 1px 2px rgba(0, 0, 0, 0.3);
-                  "
-                  >Próximo Nível</span
-                >?
+                <span class="highlight">Próximo Nível</span>?
               </h2>
             </div>
             <div class="cta-right">
@@ -1323,7 +2513,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-col footer-col-info">
-            <div class="footer-logo">
+            <a href="#hero" class="footer-logo">
               <div class="logo-icon">
                 <img
                   src="./assets/images/logo.webp"
@@ -1331,7 +2521,7 @@
                   id="footer-logo-img"
                 />
               </div>
-            </div>
+            </a>
             <p class="footer-description">
               Transformando ideias em experiências digitais excepcionais.
               Criamos websites que fazem a diferença.
@@ -1548,13 +2738,22 @@
         <path
           d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
         />
+    <!-- Custom Cursor Setup -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-trail"></div>
+    <div id="custom-cursor">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M7 17L17 7M17 7H7M17 7V17" />
       </svg>
-    </a>
+    </div>
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/particles.js"></script>
-    <script src="./assets/js/particles-sections.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/particles.js" defer></script>
+    <script src="./assets/js/particles-sections.js" defer></script>
   </body>
 </html>

@@ -191,7 +191,9 @@ body {
   z-index: 10001;
   opacity: 0; /* JS will show on move */
 }
-
+:root.light-theme .cursor-dot {
+  background-color: var(--text-secondary);
+}
 .cursor-trail {
   position: fixed;
   top: 0;
@@ -208,13 +210,18 @@ body {
     height 0.3s ease,
     background-color 0.3s ease;
 }
-
+:root.light-theme .cursor-trail {
+  border-color: var(--text-secondary);
+  background-color: rgba(35, 35, 35, 0.1);
+}
 .cursor-trail.hovered {
   width: 60px;
   height: 60px;
   background-color: rgba(174, 255, 43, 0.15);
 }
-
+:root.light-theme .cursor-trail.hovered {
+  background-color: rgba(35, 35, 35, 0.15);
+}
 @media (max-width: 1024px) {
   body {
     cursor: auto !important;

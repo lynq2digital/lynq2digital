@@ -1657,8 +1657,8 @@ body {
 
 .btn-portfolio {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-secondary);
   padding: 6px 6px 6px 20px;
   border-radius: 100px;
 
@@ -1673,13 +1673,13 @@ body {
 }
 
 .btn-portfolio span {
-  color: #ffffff;
+  color: var(--text-secondary);
   transition: color 0.3s ease;
 }
 
 .btn-portfolio .arrow {
   background: transparent;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--text-secondary);
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -1690,7 +1690,7 @@ body {
 }
 
 .btn-portfolio .arrow svg path {
-  fill: #ffffff;
+  fill: var(--text-secondary);
   transition: fill 0.3s ease;
 }
 
@@ -1702,22 +1702,9 @@ body {
 .btn-portfolio:hover .arrow svg {
   transform: rotate(0deg);
 }
-:root.light-theme .btn-portfolio {
-  border: 1px solid rgba(35, 35, 35, 0.2);
-  color: #232323;
-}
 
-:root.light-theme .btn-portfolio span {
-  color: #232323;
-}
 
-:root.light-theme .btn-portfolio .arrow {
-  border: 1px solid #232323;
-}
 
-:root.light-theme .btn-portfolio .arrow svg path {
-  fill: #232323;
-}
 /* --- DESKTOP: lado a lado --- */
 @media (min-width: 769px) {
   .portfolio-grid {
@@ -3709,7 +3696,7 @@ body {
 
     <script src="./assets/js/swiper-bundle.min.js" defer></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      src="./assets/js/gsap.min.js"
       defer
     ></script>
     <script src="./assets/js/script.js" defer></script>
